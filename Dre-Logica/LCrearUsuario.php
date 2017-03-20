@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="box box-info">
         <div class="box-header with-border">
-	        <h3 class="box-title"> <span id="titulo_lt"></span> Usuario</h3>
+	        <h3 class="box-title"> <span id="titulo_lt"></span>Usuario</h3>
         </div>
         <form class="form-horizontal" id="agregar_usuario" name="agregar_frm"  method="post" enctype="multipart/form-data">
             <div class="box-body">
@@ -88,13 +88,17 @@
                 </div>
          	
          	<div class="box-footer" align="center">
-         		<button type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success">Guardar</button> 
+         		<button type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success">Guardar</button>
+                
+                <button type="submit" id="editar" name="editar_sb" value="Editar" class="btn btn-success">Editar</button > 
+
             </div>
         </form>
   	</div>
 </div>
 <?php  
-if(isset($_REQUEST['enviar_sb'])){
+    if(isset($_REQUEST['enviar_sb'])){
+
 	$dni_usuario=$_POST["dni_usuario_txt"];
 	$nomb_usu=$_POST["nomb_usu_txt"];
 	$ap_pusu=$_POST["ap_pusu_txt"];
@@ -110,7 +114,8 @@ if(isset($_REQUEST['enviar_sb'])){
     include ("conexion.php");
 
 	$consulta="INSERT INTO usuario(dni_usuario, nomb_usu, ap_pusu, ap_musu, fech_nac, direc_usu, telef_usu, e_mail, pass_usu, id_tipo_usu, id_lugar_usu) VALUES ('$dni_usuario','$nomb_usu','$ap_pusu','$ap_musu','$fech_nac','$direc_usu','$telef_usu','$e_mail','$dni_usuario','$id_tipo_usu','$id_lugar_usu')";
-		$ejecutar_consulta=$conexion->query($consulta);
+
+	$ejecutar_consulta=$conexion->query($consulta);
 
 	if ($ejecutar_consulta) {
 			echo "<script> alert('Usuario Registrado');</script>";
@@ -119,4 +124,32 @@ if(isset($_REQUEST['enviar_sb'])){
 			echo "<script> alert('Usuario No Registrado');</script>";
 		}
 	}
-?>	
+
+    if(isset($_REQUEST["editar_sb"])){
+    
+    $dni_usuario=$_POST["dni_usuario_txt"];
+    $nomb_usu=$_POST["nomb_usu_txt"];
+    $ap_pusu=$_POST["ap_pusu_txt"];
+    $ap_musu=$_POST["ap_musu_txt"];
+    $fech_nac=$_POST["fech_nac_txt"];
+    $direc_usu=$_POST["direc_usu_txt"];
+    $telef_usu=$_POST["telef_usu_txt"];
+    $e_mail=$_POST["e_mail_txt"];
+    $pass_usu=$_POST["pass_usu_txt"];
+    $id_tipo_usu=$_POST["id_tipo_slc"];
+    $id_lugar_usu=$_POST["id_lugar_slc"];
+
+    include ("conexion.php");
+    
+    $consulta="UPDATE usuario SET nomb_usu = '$nomb_usu', ap_pusu = '$ap_pusu', ap_musu = '$ap_musu', fech_nac = '$fech_nac', direc_usu = '$direc_usu', telef_usu = '$telef_usu', e_mail = '$e_mail', pass_usu = '$pass_usu', id_tipo_usu = '$id_tipo_usu', id_lugar_usu = '$id_lugar_usu' where dni_usuario = '$dni_usuario'";
+
+    $ejecutar_consulta=$conexion->query($consulta);
+    
+    if ($ejecutar_consulta) {
+            echo "<script> alert('Usuario Actualizado');</script>";
+        }
+        else{
+            echo "<script> alert('Usuario No Actualizado');</script>";
+        }
+    }
+?>

@@ -33,8 +33,6 @@ function modalEditCA(id) {
 
       console.log(result.id_otros);
 
-      
-
     }).error(function(dt){
        console.log(dt);
     });

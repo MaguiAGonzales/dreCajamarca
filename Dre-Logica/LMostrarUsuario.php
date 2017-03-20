@@ -46,17 +46,13 @@
 							<td><?= $registro['lugar_usu'] ?></td>
 							<td>
 								
-								<a href="" class="btn btn-info btn-sm"> <i class="fa fa-file"></i></a>
-
-
 								<button href="" class="btn btn-warning btn-sm"
 								 onclick="modalEditUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-edit"></i></button>
 
-								<a href="" class="btn btn-danger btn-sm"> <i class="fa fa-remove"></i></a>
-
+								 <button href="" class="btn btn-danger btn-sm"
+								 onclick="EliminarUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-remove"></i></button>				
 							</td>
 						</tr>
-							
 							
 					<?php } ?>
 							

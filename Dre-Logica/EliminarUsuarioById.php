@@ -4,10 +4,9 @@
  
 	include('conexion.php');
 
-	$query = "DELETE FROM otros where id_otros = $id";
+	$query = "DELETE FROM usuario where dni_usuario = $id";
 
 	$consul = $conexion->query($query);
-
 
 	if($consul == 1){
 

@@ -7,7 +7,6 @@
         <form class="form-horizontal" id="agregar_lugar_trabajo" name="agregar_Lugar_Trabajo_frm"  method="post" enctype="multipart/form-data">
             <div class="box-body">
 
-            	<input name="id_otros_txt" hidden="">
                 <div class="form-group">
                 	<label for="nombre" class="col-sm-2 control-label">Nombre del Campo Adicional</label>
                 	<div class="col-sm-10">
@@ -46,7 +45,7 @@
 
     include ("conexion.php");
     
-    $consulta=" UPDATE otros SET nombre = '$nombre' where id_otros = $id_otros  ";
+    $consulta=" UPDATE otros SET nombre = '$nombre' where id_otros = '$id_otros'";
     $ejecutar_consulta=$conexion->query($consulta);
     if ($ejecutar_consulta) {
             echo "<script> alert('Campo Adicional Actualizado');</script>";

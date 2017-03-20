@@ -1,7 +1,8 @@
 <?php
-$id = $_POST['id'];
+
+	$id = $_POST['id'];
  
-include('conexion.php');
+	include('conexion.php');
 
 	$query = "SELECT * FROM otros where id_otros = $id";
 

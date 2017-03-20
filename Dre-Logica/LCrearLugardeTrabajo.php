@@ -16,7 +16,7 @@
             	<div class="form-group">
                 	<label for="lugar_usu" class="col-sm-2 control-label">Nombre del Lugar</label>
                 	<div class="col-sm-10">
-						<input type="text" class="form-control" id="lugar_usu" name="lugar_usu_txt" placeholder="Nombre del Lugar" title="Nombre del Lugar"   pattern="[a-Z]" required>
+						<input type="text" class="form-control" id="lugar_usu" name="lugar_usu_txt" placeholder="Nombre del Lugar" title="Nombre del Lugar" pattern="[a-Z]" required>
                 	</div>
             	</div>
          	
@@ -54,7 +54,7 @@
 
     include ("conexion.php");
     
-    $consulta=" UPDATE lugar_trabajo SET lugar_usu = '$lugar_usu' where id_lugar_usu = $id_lugar_usu  ";
+    $consulta="UPDATE lugar_trabajo SET lugar_usu = '$lugar_usu' where id_lugar_usu = '$id_lugar_usu'";
     $ejecutar_consulta=$conexion->query($consulta);
     if ($ejecutar_consulta) {
             echo "<script> alert('Lugar de Trabajo Actualizado');</script>";

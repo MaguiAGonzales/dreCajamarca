@@ -9,5 +9,5 @@ include('conexion.php');
 
 	$registro = $consul->fetch_assoc();
 
-	echo var_dump($registro);
+	echo json_encode($registro);
 ?>
