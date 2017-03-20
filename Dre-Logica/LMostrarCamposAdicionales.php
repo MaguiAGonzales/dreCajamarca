@@ -34,27 +34,12 @@
 						<tr>
 							<td><?= $registro['nombre'] ?></td>
 							<td>
-								<a href="" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+								<button href="" class="btn btn-warning btn-sm"
+								 onclick="modalEditCA(<?= $registro['id_otros'] ?>)"> <i class="fa fa-edit"></i></button>
 								
-  								<form method="_POST" action="">
-  									<input type="hidden" name="id" value= <?= $registro['id_otros']?> >
-  									<input type="submit" value="eliminar" name="eliminar"></i>
-  								
-									<?php
-	  									if (isset($_POST["eliminar"]))
-										{
-										$datos = $_POST["id"];
+								<button href="" class="btn btn-danger btn-sm"
+								 onclick="EliminarCA(<?= $registro['id_otros'] ?>)"> <i class="fa fa-remove"></i></button>
 
-										$consulta = "DELETE FROM otros WHERE id_otros=$datos";
-
-										$ejecutar_consulta=$conexion->query($consulta);
-								            if ($ejecutar_consulta) {
-								                    echo "<script> alert('Campo Adicional Eliminado');</script>";
-								                }
-								                else{
-								                    echo "<script> alert('Campo Adicional No Eliminado');</script>";
-								                }
-									}?>
 
   								</form>
 							</td>

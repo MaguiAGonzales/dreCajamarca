@@ -2,13 +2,14 @@
 
 	include('conexion.php');
 
-	$query = "SELECT * FROM usuario ORDER BY dni_usuario ASC";
+	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu ORDER BY dni_usuario ASC";
 
 	 if(isset($_POST["buscar"])){
 
 	 	$descripcion = $_POST["filtroDescripcion"];
 
-	 	$query = "SELECT * FROM usuario where dni_usuario like '%$descripcion%' ORDER BY dni_usuario ASC";
+	 	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu where dni_usuario like '
+	 	%descripcion%' ORDER BY dni_usuario ASC";
 	}
 
 	$consul = $conexion->query($query) ;
@@ -41,14 +42,18 @@
 							<td><?= $registro['nomb_usu'] ?></td>
 							<td><?= $registro['ap_pusu'] ?></td>
 							<td><?= $registro['ap_musu'] ?></td>
-							<!--
-							<td><?= $registgro['tipo_usuario/cargo_usu'] ?></td>
-							<td><?= $registgro['lugar_trabajo/lugar_usu'] ?></td>
-							-->
+							<td><?= $registro['cargo_usu'] ?></td>
+							<td><?= $registro['lugar_usu'] ?></td>
 							<td>
+								
 								<a href="" class="btn btn-info btn-sm"> <i class="fa fa-file"></i></a>
-								<a href="" class="btn btn-warning btn-sm"> <i class="fa fa-edit"></i></a>
+
+
+								<button href="" class="btn btn-warning btn-sm"
+								 onclick="modalEditUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-edit"></i></button>
+
 								<a href="" class="btn btn-danger btn-sm"> <i class="fa fa-remove"></i></a>
+
 							</td>
 						</tr>
 							

@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="box box-info">
         <div class="box-header with-border">
-	        <h3 class="box-title">Crear Lugar de Trabajo</h3>
+	        <h3 class="box-title"> <span id="titulo_lt"></span> Usuario</h3>
         </div>
         <form class="form-horizontal" id="agregar_usuario" name="agregar_frm"  method="post" enctype="multipart/form-data">
             <div class="box-body">

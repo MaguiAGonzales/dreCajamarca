@@ -1,7 +1,7 @@
 <div class="col-md-12">
     <div class="box box-info">
         <div class="box-header with-border">
-	        <h3 class="box-title">Crear Lugar de Trabajo</h3>
+	        <h3 class="box-title"> <span id="titulo_lt"></span> Lugar de Trabajo</h3>
         </div>
         
         <form class="form-horizontal" id="agregar_lugar_trabajo" name="agregar_Lugar_Trabajo_frm"  method="post" enctype="multipart/form-data">
@@ -22,6 +22,9 @@
          	
          	<div class="box-footer" align="center">
          		<button type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success">Guardar</button> 
+                
+                <button type="submit" id="editar" name="editar_sb" value="Editar" class="btn btn-success">Editar</button > 
+
             </div>
         </form>
   	</div>
@@ -43,4 +46,21 @@
 			echo "<script> alert('Lugar de Trabajo No Registrado');</script>";
 		}
 	}
+
+    if(isset($_REQUEST["editar_sb"])){
+    
+    $id_lugar_usu=$_POST["id_lugar_usu_txt"];
+    $lugar_usu=$_POST["lugar_usu_txt"];
+
+    include ("conexion.php");
+    
+    $consulta=" UPDATE lugar_trabajo SET lugar_usu = '$lugar_usu' where id_lugar_usu = $id_lugar_usu  ";
+    $ejecutar_consulta=$conexion->query($consulta);
+    if ($ejecutar_consulta) {
+            echo "<script> alert('Lugar de Trabajo Actualizado');</script>";
+        }
+        else{
+            echo "<script> alert('Lugar de Trabajo No Actualizado');</script>";
+        }
+    }
 ?>	

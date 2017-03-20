@@ -23,7 +23,7 @@
 					<table  class="table table-bordered table-hover">
 					    <thead>
 					      <tr>
-					        <th>Id</th>
+					        <th>Código</th>
 					        <th>Nombre</th>
 					        <th>Opciones</th>
 					      </tr>
@@ -37,9 +37,12 @@
 							<td><?= $registro['lugar_usu'] ?></td>
 
 							<td>
-								<a href="" class="btn btn-info btn-sm"> <i class="fa fa-file"></i></a>
-								<a href="" class="btn btn-warning btn-sm"> <i class="fa fa-edit"></i></a>
-								<a href="" class="btn btn-danger btn-sm"> <i class="fa fa-remove"></i></a>
+								<button href="" class="btn btn-warning btn-sm"
+								 onclick="modalEditLT(<?= $registro['id_lugar_usu'] ?>)"> <i class="fa fa-edit"></i></button>
+								
+								<button href="" class="btn btn-danger btn-sm"
+								 onclick="EliminarLT(<?= $registro['id_lugar_usu'] ?>)"> <i class="fa fa-remove"></i></button>
+
 							</td>
 						</tr>
 							
