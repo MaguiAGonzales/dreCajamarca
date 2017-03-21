@@ -29,7 +29,7 @@
             	<div class="form-group">
                 	<label for="ap_musu" class="col-sm-2 control-label">Apellido Materno</label>
                 	<div class="col-sm-10">
-						<input type="text" class="form-control" id="ap_materno" name="ap_musu_txt" placeholder="Ingrese el Apellido Materno" title="Ingrese el Apellido Materno" pattern="[a-Z]" required>
+						<input type="text" class="form-control" id="ap_musu" name="ap_musu_txt" placeholder="Ingrese el Apellido Materno" title="Ingrese el Apellido Materno" pattern="[a-Z]" required>
                 	</div>
             	</div>
 
@@ -50,7 +50,7 @@
             	<div class="form-group">
                 	<label for="telef_usu" class="col-sm-2 control-label">Teléfono</label>
                 	<div class="col-sm-10">
-						<input type="tel" class="form-control" id="tel_usu" name="telef_usu_txt" placeholder="Ingrese número de telefono" title="Ejemplo:076345678 O 999999999" pattern="[0-9]{9}" required>
+						<input type="text" class="form-control" id="tel_usu" name="telef_usu_txt" placeholder="Ingrese número de telefono" title="Ejemplo:076345678 O 999999999" pattern="[0-9]{9}" required>
                 	</div>
             	</div>
 
@@ -80,10 +80,11 @@
                         </select>
                     </div>
             	</div>
-                
-                <div class="form-group">
+
+                <div class="form-group" id="input_contrasenia">
+                    <label for="pass_usu" class="col-sm-2 control-label">Contraseña</label>
                     <div class="col-sm-10">
-                        <input type="hidden" class="form-control" id="pass_usu" name="pass_usu_txt" placeholder="Ingrese contraseña" title="Contraseña" required>
+                        <input type="pass_usu" class="form-control" id="pass_usu" name="pass_usu_txt" placeholder="Ingrese contraseña" title="Contraseña" >
                     </div>
                 </div>
          	
@@ -107,7 +108,7 @@
 	$direc_usu=$_POST["direc_usu_txt"];
 	$telef_usu=$_POST["telef_usu_txt"];
 	$e_mail=$_POST["e_mail_txt"];
-	$pass_usu=$_POST["pass_usu_txt"];
+	//$pass_usu=$_POST["pass_usu_txt"];
 	$id_tipo_usu=$_POST["id_tipo_slc"];
 	$id_lugar_usu=$_POST["id_lugar_slc"];
 	
@@ -127,21 +128,21 @@
 
     if(isset($_REQUEST["editar_sb"])){
     
-    $dni_usuario=$_POST["dni_usuario_txt"];
-    $nomb_usu=$_POST["nomb_usu_txt"];
-    $ap_pusu=$_POST["ap_pusu_txt"];
-    $ap_musu=$_POST["ap_musu_txt"];
-    $fech_nac=$_POST["fech_nac_txt"];
+    //$dni_usuario=$_POST["dni_usuario_txt"];
+    //$nomb_usu=$_POST["nomb_usu_txt"];
+   // $ap_pusu=$_POST["ap_pusu_txt"];
+    //$ap_musu=$_POST["ap_musu_txt"];
+    //$fech_nac=$_POST["fech_nac_txt"];
     $direc_usu=$_POST["direc_usu_txt"];
     $telef_usu=$_POST["telef_usu_txt"];
     $e_mail=$_POST["e_mail_txt"];
     $pass_usu=$_POST["pass_usu_txt"];
-    $id_tipo_usu=$_POST["id_tipo_slc"];
+    //$id_tipo_usu=$_POST["id_tipo_slc"];
     $id_lugar_usu=$_POST["id_lugar_slc"];
 
     include ("conexion.php");
     
-    $consulta="UPDATE usuario SET nomb_usu = '$nomb_usu', ap_pusu = '$ap_pusu', ap_musu = '$ap_musu', fech_nac = '$fech_nac', direc_usu = '$direc_usu', telef_usu = '$telef_usu', e_mail = '$e_mail', pass_usu = '$pass_usu', id_tipo_usu = '$id_tipo_usu', id_lugar_usu = '$id_lugar_usu' where dni_usuario = '$dni_usuario'";
+    $consulta="UPDATE usuario SET direc_usu = '$direc_usu', telef_usu = '$telef_usu', e_mail = '$e_mail', pass_usu = '$pass_usu', id_lugar_usu = '$id_lugar_usu' where dni_usuario = '$dni_usuario'";
 
     $ejecutar_consulta=$conexion->query($consulta);
     

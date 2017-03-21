@@ -3,7 +3,7 @@ function modalNewLT() {
     $('#modalNew').modal('show');
     $('#titulo_lt').text("Crear");
     $("#id_lugar_usu").val('');
-    $("#id_lugar_usu").prop('disabled', false);
+    $("#id_lugar_usu").attr('readonly',false);
 	$("#lugar_usu").val('');
     $('#editar').hide();
     $('#enviar').show();
@@ -24,8 +24,8 @@ function modalNewLT() {
 	  	var result = jQuery.parseJSON(data);
 
 	  	$("#id_lugar_usu").val(result.id_lugar_usu);
-	  	$("#id_lugar_usu").prop('disabled', true);
-
+	  	$("#id_lugar_usu").attr('readonly',true);
+	  	
 	  	$("#lugar_usu").val(result.lugar_usu);
 
 	  	console.log(result.id_lugar_usu);

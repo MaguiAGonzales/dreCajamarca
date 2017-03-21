@@ -2,13 +2,13 @@
 
 	include('conexion.php');
 
-	$query = "SELECT * FROM otros ORDER BY nombre ASC";
+	$query = "SELECT * FROM otros ORDER BY id_otros ASC";
 
 	 if(isset($_POST["buscar"])){
 
 	 	$descripcion = $_POST["filtroDescripcion"];
 
-	 	$query = "SELECT * FROM otros where nombre like '%$descripcion%' ORDER BY nombre ASC";
+	 	$query = "SELECT * FROM otros where nombre like '%$descripcion%' ORDER BY id_otros ASC";
 	}
 
 	$consul = $conexion->query($query) ;
@@ -23,6 +23,7 @@
 					<table  class="table table-bordered table-hover">
 					    <thead>
 					      <tr>
+					      	<th>Código</th>
 					        <th>Nombre</th>
 					        <th>Opciones</th>
 					      </tr>
@@ -32,6 +33,7 @@
 						while ($registro = $consul->fetch_assoc()) {
 						?>
 						<tr>
+							<td><?= $registro['id_otros'] ?></td>
 							<td><?= $registro['nombre'] ?></td>
 							<td>
 								<button href="" class="btn btn-warning btn-sm"

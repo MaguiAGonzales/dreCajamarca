@@ -4,7 +4,7 @@
 	        <h3 class="box-title"> <span id="titulo_lt"></span> Lugar de Trabajo</h3>
         </div>
         
-        <form class="form-horizontal" id="agregar_lugar_trabajo" name="agregar_Lugar_Trabajo_frm"  method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" id="agregar_lugar_trabajo" name="agregar_Lugar_Trabajo_frm"  method="post" >
             <div class="box-body">
             	<div class="form-group">
                 	<label for="id_lugar_usu" class="col-sm-2 control-label">Código del lugar</label>
@@ -51,6 +51,8 @@
     
     $id_lugar_usu=$_POST["id_lugar_usu_txt"];
     $lugar_usu=$_POST["lugar_usu_txt"];
+
+    //var_dump($_POST); 
 
     include ("conexion.php");
     

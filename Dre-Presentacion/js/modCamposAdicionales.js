@@ -4,7 +4,7 @@ function modalNewCA() {
   $('#titulo_lt').text("Crear");
 
   $("#id_otros").val('');
-  $("#id_otros").prop('disabled', false);
+  $("#id_otros").attr('readonly',false);
   $("#nombre").val('');
 
   $('#editar').hide();
@@ -26,9 +26,8 @@ function modalEditCA(id) {
 
       var result = jQuery.parseJSON(data);
 
-      $("#id_otros").val(result.id_otros);
-      $("#id_otros").prop('disabled', true);
-
+      $("#id_otros_txt").val(result.id_otros);
+      
       $("#nombre").val(result.nombre);
 
       console.log(result.id_otros);

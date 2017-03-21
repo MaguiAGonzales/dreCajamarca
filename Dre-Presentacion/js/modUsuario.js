@@ -4,15 +4,19 @@ function modalNewUsu() {
     $('#titulo_lt').text("Crear");
 
     $("#dni_usuario").val('');
-  	$("#dni_usuario").prop('disabled', false);
+  	$("#dni_usuario").attr('readonly',false);
 
   	$("#nomb_usu").val('');
+  	$("#nomb_usu").attr('readonly',false);
 
   	$("#ap_pusu").val('');
+  	$("#ap_pusu").attr('readonly',false);
 
   	$("#ap_musu").val('');
+  	$("#ap_musu").attr('readonly',false);
 
   	$("#fech_nac").val('');
+  	$("#fech_nac").attr('readonly',false);
 
   	$("#direc_usu").val('');
 
@@ -20,18 +24,22 @@ function modalNewUsu() {
 
   	$("#e_mail").val('');
 
-  	$("#id_tipo_usu").val('');
+  	$("#id_tipo").val('');
+  	$("#id_tipo").attr('disabled', false);
 
-  	$("#id_lugar_usu").val('')
+
+  	$("#id_lugar").val('')
 
     $('#editar').hide();
     $('#enviar').show();
+    $('#input_contrasenia').hide();
 }
 
 function modalEditUsu(id) {
 
 	$('#editar').show();
     $('#enviar').hide();
+    $('#input_contrasenia').show();
 
 	var url = "getUsuarioById.php";
 
@@ -41,32 +49,32 @@ function modalEditUsu(id) {
 		var result = jQuery.parseJSON(data);
 
 	  	$("#dni_usuario").val(result.dni_usuario);
-	  	$("#dni_usuario").prop('disabled', true);
+	  	$("#dni_usuario").attr('readonly',true);
 
 	  	$("#nomb_usu").val(result.nomb_usu);
-	  	$("#nomb_usu").prop('disabled', true);
+	  	$("#nomb_usu").attr('readonly',true);
 
 	  	$("#ap_pusu").val(result.ap_pusu);
-	  	$("#ap_pusu").prop('disabled', true);
+	  	$("#ap_pusu").attr('readonly',true);
 
 	  	$("#ap_musu").val(result.ap_musu);
-	  	$("#ap_musu").prop('disabled', true);
+	  	$("#ap_musu").attr('readonly',true);
 
 	  	$("#fech_nac").val(result.fech_nac);
-	  	$("#fech_nac").prop('disabled', true);
+	  	$("#fech_nac").attr('readonly',true);
 
 	  	$("#direc_usu").val(result.direc_usu);
 
-	  	$("#telef_usu").val(result.telef_usu);
+	  	$("#tel_usu").val(result.telef_usu);
 
 	  	$("#e_mail").val(result.e_mail);
 
-	  	$("#id_tipo_usu").val(result.id_tipo_usu);
+	  	$("#id_tipo").val(result.id_tipo);
+	  	$("#id_tipo").attr('disabled', 'disabled');
 
-	  	$("#id_lugar_usu").val(result.id_lugar_usu);
-	  	$("#id_lugar_usu").prop('disabled', true);
+	  	$("#id_lugar").val(result.id_lugar_usu);
 
-	  	console.log(result.dni_usuario);
+	  	console.log(result);
 
 	}).error(function(dt){
 	  	console.log(dt);
@@ -95,3 +103,4 @@ function EliminarUsu(id){
 
 		console.log(data);
 	});
+}
