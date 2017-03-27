@@ -30,8 +30,12 @@
 <script src="../plugins/chartjs/Chart.min.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="../dist/js/pages/dashboard2.js"></script>
+<script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
+
+<link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
+
 
 
 

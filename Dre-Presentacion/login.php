@@ -25,7 +25,7 @@
   </div>
   <div class="login-box-body">
     <p class="login-box-msg">Dirección Regional de Educación - Cajamarca<br>Sistema de Constancia de Pagos</p>
-    <form action="../index.html" method="post">
+    <form action="../Dre-Logica/LugardeTrabajo.php" method="post">
       <div class="form-group has-feedback">
         <input type="usuario" class="form-control" placeholder="Usuario">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>

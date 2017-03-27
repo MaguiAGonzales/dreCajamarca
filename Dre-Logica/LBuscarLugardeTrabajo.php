@@ -30,16 +30,7 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="modalNew">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-       
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <?php include 'LCrearLugardeTrabajo.php'; ?>
-        </div>
-        
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <?php include 'LCrearLugardeTrabajo.php'; ?>
+    </div>
+  </div>
+</div>

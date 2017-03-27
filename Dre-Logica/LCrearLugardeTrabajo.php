@@ -7,15 +7,15 @@
         <form class="form-horizontal" id="agregar_lugar_trabajo" name="agregar_Lugar_Trabajo_frm"  method="post" >
             <div class="box-body">
             	<div class="form-group">
-                	<label for="id_lugar_usu" class="col-sm-2 control-label">Código del lugar</label>
-                	<div class="col-sm-10">
+                	<label for="id_lugar_usu" class="col-sm-3 control-label">Código</label>
+                	<div class="col-sm-9">
                     	<input type="text" class="form-control" id="id_lugar_usu" name="id_lugar_usu_txt" placeholder="Código del lugar" title="Código del lugar" required>
                 	</div>
             	</div>
         
             	<div class="form-group">
-                	<label for="lugar_usu" class="col-sm-2 control-label">Nombre del Lugar</label>
-                	<div class="col-sm-10">
+                	<label for="lugar_usu" class="col-sm-3 control-label">Nombre</label>
+                	<div class="col-sm-9">
 						<input type="text" class="form-control" id="lugar_usu" name="lugar_usu_txt" placeholder="Nombre del Lugar" title="Nombre del Lugar" pattern="[a-Z]" required>
                 	</div>
             	</div>

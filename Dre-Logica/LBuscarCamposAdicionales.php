@@ -16,7 +16,7 @@
                     <div class="col-sm-1">
                         <button class="btn btn-success" >Buscar</button>
                     </div>
-                     <div class="col-sm-1">
+                    <div class="col-sm-1">
                         <a class="btn btn-primary" onclick="modalNewCA()" > Nuevo </a>
                     </div>
 
@@ -30,16 +30,7 @@
 <div class="modal fade" tabindex="-1" role="dialog" id="modalNew">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-       
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <?php include 'LCrearCamposAdicionales.php'; ?>
-        </div>
-        
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
+      <?php include 'LCrearCamposAdicionales.php'; ?>
+    </div>
+  </div>
+</div>

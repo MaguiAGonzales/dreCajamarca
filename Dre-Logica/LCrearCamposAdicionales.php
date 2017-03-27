@@ -12,8 +12,8 @@
 
 
                 <div class="form-group">
-                	<label for="nombre" class="col-sm-2 control-label">Nombre del Campo Adicional</label>
-                	<div class="col-sm-10">
+                	<label for="nombre" class="col-sm-3 control-label">Nombre</label>
+                	<div class="col-sm-9">
 						<input type="text" class="form-control" id="nombre" name="nombre_txt" placeholder="Nombre del Campo Adicional" title="Nombre del Campo Adicional" pattern="[a-Z]" required>
                 	</div>
             	</div>

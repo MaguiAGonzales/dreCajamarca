@@ -28,17 +28,15 @@
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="modalNew">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" id="mdialTamanio">
     <div class="modal-content">
-      <div class="modal-header">
-       
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <?php include 'LCrearUsuario.php'; ?>
-        </div>
-        
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+      <?php include 'LCrearUsuario.php'; ?>
+    </div>
+  </div>
+</div>
+
+<style>
+  #mdialTamanio{
+    width: 60%;
+  }
+</style>

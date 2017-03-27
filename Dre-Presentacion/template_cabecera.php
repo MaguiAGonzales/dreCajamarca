@@ -17,13 +17,14 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <link rel="stylesheet" href="../dist/css/skins/_all-skins.min.css">
+  <script type="text/javascript" src="../Dre-Presentacion/plugins/vue.js"></script>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
-    <a href="index.html" class="logo">
+    <a href="../Dre-Logica/LugardeTrabajo.php" class="logo">
       <span class="logo-lg"><b>DRE Cajamarca</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -41,13 +42,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Juanito Alcachofa</span>
             </a>
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
-            <a href="Dre/login.html"><i class="glyphicon glyphicon-log-out"></i></a>
+            <a href="../Dre-Presentacion/login.php"><i class="glyphicon glyphicon-log-out"></i></a>
           </li>
         </ul>
       </div>
