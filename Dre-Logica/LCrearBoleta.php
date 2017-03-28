@@ -18,7 +18,7 @@
 
 	                <div class="row">
 	                    <div class="col-sm-2">
-	                        <input class="form-control" id="filDNI" type="text" name="filtroDescripcion" placeholder="Ingrese N° de Dni">
+	                        <input class="form-control" id="filDNI" type="text" name="filtroDescripcion" placeholder="Ingrese N° de Dni" @focus='loadFecha()'>
 	                    </div>
 
 	                    <div class="col-sm-1">
@@ -34,7 +34,7 @@
 			            </div>
 
 			            <div class="col-sm-2">
-							<input type="text" class="form-control" id="numeroBo" name="numeroBo" placeholder="Ingrese N° de Boleta">
+							<input type="text" @focus='loadFecha()' class="form-control" id="numeroBo" name="numeroBo" placeholder="Ingrese N° de Boleta">
 			            </div>
 			         </div>
 	            </div>
@@ -250,10 +250,17 @@
 				                    	<input type="text" class="form-control" id="monto" name="nombre_txt" placeholder="Monto" required>
 				                    </div>
 				                    <div class="col-sm-2">
-				                    	<button class="btn btn-success">+</button>
+				                    	<a @click="addAdicional()" class="btn btn-success">+</a>
 				                    </div>
 					            </div>	
 				        	</form>
+
+				        	<table class="table ">
+				        		 <tr v-for="item in adicionales">
+								    <td>{{ item.descripcion }} </td>
+								    <td>{{ item.monto }}</td>
+								 </tr>
+				        	</table>
 			        </div>
 				</div>
 
