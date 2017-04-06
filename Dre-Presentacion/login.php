@@ -16,41 +16,43 @@
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="../plugins/iCheck/square/blue.css">
-
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
+  
   <div class="login-logo">
     <img src="imagen/login.png" class="login-logo">
   </div>
+  
   <div class="login-box-body">
-    <p class="login-box-msg">Dirección Regional de Educación - Cajamarca<br>Sistema de Constancia de Pagos</p>
-    <form action="../Dre-Logica/LugardeTrabajo.php" method="post">
+    <p class="login-box-msg">Dirección Regional de Educación - Cajamarca<br>Sistema de Constancia de Pagos</p>  
+    <form action="../Dre-Logica/control.php" method="post">
       <div class="form-group has-feedback">
-        <input type="usuario" class="form-control" placeholder="Usuario">
+        <input type="text" class="form-control" placeholder="Usuario" id="id_buscar" name="buscar_txt">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
+      
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Password" id="id_pass" name="pass_txt">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-        <!-- /.col -->
+      
       <div class="row">
           <div class="col-xs-8">
           </div>
-          <!-- /.col -->
+         
           <div class="col-xs-4">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+            <button type="submit" id="enviar" name="enviar_sb" value="Ingresar" class="btn btn-primary btn-block btn-flat">Ingresar</button>
           </div>
       </div>
     </form>
   </div>
   <!-- /.login-box-body -->
 </div>
+</body>
+</html>
 
 <!-- jQuery 2.2.3 -->
 <script src="../plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>

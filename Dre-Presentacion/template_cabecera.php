@@ -39,16 +39,17 @@
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
           </li>
-          <!-- User Account: style can be found in dropdown.less -->
+          <!-- User Account: style can be found in dropdown.less 
           <li class="dropdown user user-menu">
             <a class="dropdown-toggle" data-toggle="dropdown">
               <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Juanito Alcachofa</span>
+              <span class="hidden-xs"><?php $usuario ?></span>
             </a>
           </li>
+          -->
           <!-- Control Sidebar Toggle Button -->
           <li>
-            <a href="../Dre-Presentacion/login.php"><i class="glyphicon glyphicon-log-out"></i></a>
+            <a href="../Dre-Logica/salir.php"><i class="glyphicon glyphicon-log-out"></i></a>
           </li>
         </ul>
       </div>
@@ -76,7 +77,7 @@
         </li>
         <li>
           <a href="../Dre-Logica/Boleta.php">
-            <i class="glyphicon glyphicon-list-alt"></i><span>BOLETAS</span>
+            <i class="glyphicon glyphicon-list-alt" id="b"></i><span>BOLETAS</span>
           </a>
         </li>
         <li>

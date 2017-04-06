@@ -25,9 +25,7 @@
 					      <tr>
 					      	<th>Código Boleta</th>
 					      	<th>Dni</th>
-					        <th>Nombre</th>
-					        <th>Apellido Paterno</th>
-					        <th>Apellido Materno</th>
+					        <th>Nombre Completo</th>
 					        <th>Fecha</th>
 					        <th>Opciones</th>
 					      </tr>
@@ -40,8 +38,6 @@
 							<td><?= $registro['id_boleta'] ?></td>
 							<td><?= $registro['dni_usuario'] ?></td>
 							<td><?= $registro['nomb_usu'] ?></td>
-							<td><?= $registro['ap_pusu'] ?></td>
-							<td><?= $registro['ap_musu'] ?></td>
 							<td><?= $registro['fecha'] ?></td>
 							<td>
 								<button href="" class="btn btn-warning btn-sm"
@@ -60,10 +56,8 @@
 				</div>
         	</div>
         </div>	
-        <div class="box-footer" align="center">
-         		
+        <div class="box-footer" align="center">	
         </div>
-        
   	</div>
 </div>
 
@@ -71,5 +65,3 @@
 	
 	
 </div>
-
-
