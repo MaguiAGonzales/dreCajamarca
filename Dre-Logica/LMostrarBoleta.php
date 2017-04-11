@@ -20,10 +20,11 @@
             <input type="hidden" name="buscar" value="buscar">
             <div class="row">
 				<div class="col-sm-12">
-					<table  class="table table-bordered table-hover">
+					<table class="table table-bordered table-hover">
 					    <thead>
 					      <tr>
-					      	<th>Código Boleta</th>
+					      	<th>Código</th>
+					      	<th>Número Boleta</th>
 					      	<th>Dni</th>
 					        <th>Nombre Completo</th>
 					        <th>Fecha</th>
@@ -36,21 +37,29 @@
 						?>
 						<tr>
 							<td><?= $registro['id_boleta'] ?></td>
+							<td><?= $registro['numeroBo'] ?></td>
 							<td><?= $registro['dni_usuario'] ?></td>
-							<td><?= $registro['nomb_usu'] ?></td>
+
+
+							<td><?= $registro['nomb_usu']?> <?= $registro['ap_pusu']?> <?= $registro['ap_musu']?></td>
 							<td><?= $registro['fecha'] ?></td>
 							<td>
-								<button href="" class="btn btn-warning btn-sm"
-								 onclick="modalEditBO(<?= $registro['id_boleta'] ?>)"> <i class="fa fa-edit"></i></button>
-								
-								<button href="" class="btn btn-danger btn-sm"
-								 onclick="EliminarBO(<?= $registro['id_boleta'] ?>)"> <i class="fa fa-remove"></i></button>
 
+								<?php
+									if ($_COOKIE["tipo"]=='adm') {
+								?>
+								<a href="LEditarBoleta.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+								
+								<a href="LEliminarBoleta.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
+
+								<?php
+									}
+								?>
+								
   								</form>
 							</td>
 						</tr>
 					<?php } ?>
-							
 					    </tbody>
 					</table>
 				</div>

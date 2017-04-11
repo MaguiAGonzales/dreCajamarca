@@ -26,9 +26,7 @@
 					    <thead>
 					      <tr>
 					        <th>Dni</th>
-					        <th>Nombres</th>
-					        <th>Apellido Paterno</th>
-					        <th>Apellido Materno</th>
+					        <th>Nombres Completos</th>
 					        <th>Tipo Usuario</th>
 					        <th>Lugar de Trabajo</th>
 					        <th>Opciones</th>
@@ -40,18 +38,26 @@
 						?>
 						<tr>
 							<td><?= $registro['dni_usuario'] ?></td>
-							<td><?= $registro['nomb_usu'] ?></td>
-							<td><?= $registro['ap_pusu'] ?></td>
-							<td><?= $registro['ap_musu'] ?></td>
+							<td><?= $registro['nomb_usu']?> <?= $registro['ap_pusu']?> <?= $registro['ap_musu']?></td>
 							<td><?= $registro['cargo_usu'] ?></td>
 							<td><?= $registro['lugar_usu'] ?></td>
 							<td>
 								
+								<button href="" class="btn btn-info btn-sm"
+								 onclick="modalDetailsLT(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-file-text-o"></i></button>
+								
+								<?php
+									if ($_COOKIE["tipo"]=='adm') {
+								?>
 								<button href="" class="btn btn-warning btn-sm"
 								 onclick="modalEditUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-edit"></i></button>
-
+									
 								 <button href="" class="btn btn-danger btn-sm"
-								 onclick="EliminarUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-remove"></i></button>				
+								 onclick="EliminarUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-remove"></i></button>
+								<?php
+									}
+								?>
+												
 							</td>
 						</tr>
 							

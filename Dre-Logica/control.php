@@ -15,10 +15,12 @@ if(isset($_REQUEST['enviar_sb'])){
 
 			if($registro=$ejecutar_docente->fetch_assoc()) 
 			{
-   			    header("location:Usuario.php");
+   			    header("location:Datos.php");
 				session_start();
 				$_SESSION["docente"]=true;
 				$_SESSION["doc"]=$usuario;
+				Setcookie("tipo", "doc");
+				Setcookie("dni", $registro['dni_usuario']);
 			}
 			 
 			else if($registro=$ejecutar_administrador->fetch_assoc()) 
@@ -27,13 +29,15 @@ if(isset($_REQUEST['enviar_sb'])){
 				session_start();
 				$_SESSION["administrador"]=true;
 				$_SESSION["adm"]=$usuario;
+				Setcookie("tipo", "adm");
 			} 
 			else if($registro=$ejecutar_registrador->fetch_assoc()) 
 			{
-			    header("location:Boleta.php");
+			    header("location:Usuario.php");
 				session_start();
 				$_SESSION["registrador"]=true;
 				$_SESSION["reg"]=$usuario;
+				Setcookie("tipo", "reg");
 			} 
 			else 
 			{

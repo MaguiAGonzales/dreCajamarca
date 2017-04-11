@@ -39,15 +39,6 @@
           <!-- Messages: style can be found in dropdown.less-->
           <li class="dropdown messages-menu">
           </li>
-          <!-- User Account: style can be found in dropdown.less 
-          <li class="dropdown user user-menu">
-            <a class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?php $usuario ?></span>
-            </a>
-          </li>
-          -->
-          <!-- Control Sidebar Toggle Button -->
           <li>
             <a href="../Dre-Logica/salir.php"><i class="glyphicon glyphicon-log-out"></i></a>
           </li>
@@ -60,31 +51,59 @@
     <section class="sidebar">
       <ul class="sidebar-menu">
         <li class="header">MENÚ DE OPCIONES</li>
+        <?php
+          if ($_COOKIE["tipo"]=='adm') {
+        ?>
         <li>
           <a href="../Dre-Logica/LugardeTrabajo.php">
             <i class="glyphicon glyphicon-home"></i><span>LUGAR DE TRABAJO</span>
           </a>
         </li>
-        <li>
-          <a href="../Dre-Logica/Usuario.php">
-            <i class="glyphicon glyphicon-user"></i><span>USUARIO</span>
-          </a>
-        </li>
-        <li>
-          <a href="../Dre-Logica/CamposAdicionales.php">
-            <i class="glyphicon glyphicon-check"></i><span>CAMPOS ADICIONALES</span>
-          </a>
-        </li>
-        <li>
-          <a href="../Dre-Logica/Boleta.php">
-            <i class="glyphicon glyphicon-list-alt" id="b"></i><span>BOLETAS</span>
-          </a>
-        </li>
-        <li>
-          <a href="../Dre-Logica/Reporte.php">
-            <i class="glyphicon glyphicon-file"></i><span>REPORTE DE BOLETAS</span>
-          </a>
-        </li>
+        <?php
+          }
+        ?>
+
+        <?php if($_COOKIE["tipo"]=='adm' || $_COOKIE["tipo"]=='reg' ){
+          //estas opciones son para el adminsitrador y el registrador
+          ?>
+            <li>
+              <a href="../Dre-Logica/Usuario.php">
+                <i class="glyphicon glyphicon-user"></i><span>USUARIO</span>
+              </a>
+            </li>
+            <li>
+              <a href="../Dre-Logica/CamposAdicionales.php">
+                <i class="glyphicon glyphicon-check"></i><span>CAMPOS ADICIONALES</span>
+              </a>
+            </li>
+            <li>
+              <a href="../Dre-Logica/Boleta.php">
+                <i class="glyphicon glyphicon-list-alt" id="b"></i><span>BOLETAS</span>
+              </a>
+            </li>
+            <li>
+              <a href="../Dre-Logica/Reporte.php">
+                <i class="glyphicon glyphicon-file"></i><span>REPORTE DE BOLETAS</span>
+              </a>
+            </li>
+          <?php
+          }?>
+
+
+        <?php if($_COOKIE["tipo"]=='doc'){  
+        //estas opciones es netamente del docente ?>
+          <li>
+            <a href="../Dre-Logica/Datos.php">
+              <i class="glyphicon glyphicon-user"></i><span>PERFIL</span>
+            </a>
+          </li>
+           <li>
+            <a href="../Dre-Logica/Boleta.php">
+              <i class="glyphicon glyphicon-list-alt" id="b"></i><span>BOLETAS</span>
+            </a>
+          </li>
+        <?php }?>
+
       </ul>
     </section>
   </aside>

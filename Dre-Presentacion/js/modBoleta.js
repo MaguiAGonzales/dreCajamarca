@@ -13,8 +13,6 @@
         $.post( url, { id: dni })
         .done(function( data ) {
 
-
-
           if(data.length>1){
 
             var result = jQuery.parseJSON(data);
@@ -28,8 +26,6 @@
 
           }
          
-         
-
         })
         .error(function(dt){
            console.log(dt);
@@ -57,8 +53,7 @@
           this.calcularTotal();
 
        },
-       sendData : function (){
-
+       sendData : function (){        
           var url = 'saveBoleta.php';
 
           var fecha = $("#fecha").val();
@@ -67,7 +62,6 @@
           var detalle = this.adicionales;
 
           $.post( url, { 
-            
             
             dni: $("#filDNI").val(),
             numBoleta: $("#numeroBo").val(),
@@ -141,8 +135,6 @@
        },
 
        calcularTotal: function () {
-
-
 
             var rembasi   =Number($("#rem_bas").val());
             var bonpers   =Number($("#bon_per").val());

@@ -12,27 +12,24 @@
 	        
 	        <form  id="agregar_dni" method="post" >
 	            <div class="box-body">
-	            	
-	                <input type="hidden" name="buscar" value="buscar">
+
+	                <input type="hidden" id="id" name="id" value="<?= $_GET['id']?>">
 
 	                <div class="row">
 	                    <div class="col-sm-2">
-	                        <input class="form-control" id="filDNI" type="text" name="filtroDescripcion" placeholder="Ingrese N° de Dni" @focus='loadFecha()'>
+	                        <input class="form-control" id="filDNI" type="text" name="filtroDescripcion" disabled>
 	                    </div>
 
-	                    <div class="col-sm-1">
-	                        <a @click="traerPersona()" class="btn btn-success">Buscar</a>
-	                    </div>
 			            <div class="col-sm-3">
-							<input type="text" class="form-control" id="nomb_completo" name="nomb_completo_txt" disabled=>
+							<input type="text" class="form-control" id="nomb_completo" name="nomb_completo_txt" disabled>
 			            </div>
 
 			            <div class="col-sm-3">
-							<input type="date"  class="form-control" id="fecha" name="fecha" @focus='loadFecha()'>
+							<input type="text" class="form-control" id="fecha" name="fecha" disabled>
 			            </div>
 
 			            <div class="col-sm-2">
-							<input type="text" @focus='loadFecha()' class="form-control" id="numeroBo" name="numeroBo" placeholder="Ingrese N° de Boleta">
+							<input type="text" class="form-control" id="numeroBo" name="numeroBo" disabled>
 			            </div>
 			         </div>
 	            </div>
@@ -96,7 +93,7 @@
 							<input type="text" class="form-control" id="judiciales" @keyup='calcularTotal()'  name="judiciales_txt" required>
 						</div>
 						<div>
-							<label for="sesdid">Sesdid</label>
+							<label for="sesdis">Sesdis</label>
 							<input type="text" class="form-control" id="sesdis"  @keyup='calcularTotal()' name="sesdis_txt" required>
 						</div>
 					</div>
@@ -206,7 +203,7 @@
 					<div class="col-md-2">
 						<div>
 							<label for="rein_0_rem">Rein/0 Rem</label>
-							<input type="text" class="form-control" id="rein_0_rem" @keyup='calcularTotal()'  name="rein_0_rem_txt" required>
+							<input type="text" class="form-control" id="rein_0_rem" @keyup='calcularTotal()' name="rein_0_rem_txt" required>
 						</div>
 						<div>
 							<label for="ipss_vida">Ipss Vida</label>
@@ -254,7 +251,8 @@
 				        	</form>
 
 				        	<table class="table">
-				        		 <tr v-for="item in adicionales">
+				        		 <tr v-for="(item,index) in adicionales">
+				        		 	<td><a @click="deleteAdicional(index)" class="btn btn-danger">-</a></td>
 								    <td>{{ item.descripcion }} </td>
 								    <td>{{ item.monto }}</td>
 								 </tr>
@@ -267,7 +265,8 @@
 				</div>
 
 				<div class="box-footer" align="center">
-	     			<a type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success" @click="sendData()">Guardar</a> 
+	     			<a type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success" @click="sendData()">Actualizar</a> 
+	           
 	            </div>
 			</form>	
 		</div>
@@ -276,9 +275,8 @@
 
 </section>
 </div>
-
-<?php
-    $script_module='modBoleta.js';
-   ?>
+  <?php
+    $script_module='EditarBoleta.js';
+ ?>
 
 <?php include('../Dre-Presentacion/template_footer.php') ?>

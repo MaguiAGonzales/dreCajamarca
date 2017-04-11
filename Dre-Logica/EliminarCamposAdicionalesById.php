@@ -1,6 +1,6 @@
 <?php
 	
-	$id = $_POST['id'];
+	$id = $_GET['id'];
  
 	include('conexion.php');
 

@@ -15,7 +15,7 @@
     <!-- tabla   -->
 
     <div class="row" >
-      <?php  include('LMostrarBoleta.php'); ?>
+      <?php  include 'LMostrarBoleta.php'; ?>
     </div>
 
     <!-- ./  tabla -->

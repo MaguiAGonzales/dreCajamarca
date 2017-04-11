@@ -37,6 +37,9 @@
 							<td><?= $registro['lugar_usu'] ?></td>
 
 							<td>
+								<button href="" class="btn btn-info btn-sm"
+								 onclick="modalDetailsLT(<?= $registro['id_lugar_usu'] ?>)"> <i class="fa fa-file-text-o"></i></button>
+
 								<button href="" class="btn btn-warning btn-sm"
 								 onclick="modalEditLT(<?= $registro['id_lugar_usu'] ?>)"> <i class="fa fa-edit"></i></button>
 								
@@ -56,13 +59,6 @@
         </div>	
         <div class="box-footer" align="center">
 
-        <nav aria-label="...">
-		  <ul class="pagination">
-		    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-		    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-		    ...
-		  </ul>
-		</nav>
          		
         </div>
         

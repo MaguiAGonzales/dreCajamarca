@@ -49,7 +49,7 @@
                 <div class="form-group">
                     <label for="telef_usu" class="col-sm-4 control-label">Teléfono</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="tel_usu" name="telef_usu_txt" placeholder="Ingrese número de telefono" title="Ejemplo:076345678 O 999999999" pattern="[0-9]{9}" required>
+                        <input type="text" class="form-control" id="telef_usu" name="telef_usu_txt" placeholder="Ingrese número de telefono" title="Ejemplo:076345678 O 999999999" pattern="[0-9]{9}" required>
                     </div>
                 </div>
 
