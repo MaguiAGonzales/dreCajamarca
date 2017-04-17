@@ -63,8 +63,6 @@ function modalEditLT(id) {
 
 	  	console.log(result.id_lugar_usu);
 
-	    
-
 	  }).error(function(dt){
 	  	 console.log(dt);
 	  });

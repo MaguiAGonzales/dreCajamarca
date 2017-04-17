@@ -28,10 +28,6 @@
 
   <?php
     $script_module='modLugarTrabajo.js';
-   ?>
+  ?>
 
 <?php include('../Dre-Presentacion/template_footer.php') ?>
-
-
-
-

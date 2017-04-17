@@ -36,9 +36,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
 
-
-
-
 <?php
 
   //para incluir scripts pertenecientes a cada modulo
@@ -49,7 +46,6 @@
   }
 
  ?>
-
 
 </body>
 </html>

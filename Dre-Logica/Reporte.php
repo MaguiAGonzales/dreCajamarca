@@ -1,41 +1,19 @@
-<?php
-require('../fpdf181/fpdf.php');
+<?php include('../Dre-Presentacion/template_cabecera.php') ?>
 
-class PDF extends FPDF
-{
-// Cabecera de página
-function Header()
-{
-    // Logo
-    $this->Image('../Dre-Presentacion/imagen/login.png',10,8,33);
-    // Arial bold 15
-    $this->SetFont('Arial','B',15);
-    // Movernos a la derecha
-    $this->Cell(80);
-    // Título
-    $this->Cell(30,10,'Constancia de Pagos',1,0,'C');
-    // Salto de línea
-    $this->Ln(20);
-}
+  <!--contenido va aqui -->
+  <div class="content-wrapper">
+    <section class="content">  
 
-// Pie de página
-function Footer()
-{
-    // Posición: a 1,5 cm del final
-    $this->SetY(-15);
-    // Arial italic 8
-    $this->SetFont('Arial','I',8);
-    // Número de página
-    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
-}
-}
+    <!-- Filtro  -->
 
-// Creación del objeto de la clase heredada
-$pdf = new PDF();
-$pdf->AliasNbPages();
-$pdf->AddPage();
-$pdf->SetFont('Times','',12);
-for($i=1;$i<=40;$i++)
-    $pdf->Cell(0,10,'Imprimiendo línea número '.$i,0,1);
-$pdf->Output();
-?>
+    <div class="row"> 
+      <?php include 'LReportes.php'; ?> 
+    </div>
+
+    <!-- ./  filtro -->
+     
+    </section>
+  </div>
+  <!-- fin de contenido -->
+
+<?php include('../Dre-Presentacion/template_footer.php') ?>
