@@ -2,9 +2,9 @@
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
-      <b>Version</b> 1.0
+      <b>Version</b> 2.0
     </div>
-    <strong>&copy;Dirección Regional de Educación - 2017
+    <strong>&copy;Dirección Regional de Educación - Oficina de Informática
   </footer>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -37,8 +37,6 @@
 <script src="../dist/js/demo.js"></script>
 
 <?php
-
-  //para incluir scripts pertenecientes a cada modulo
 
   if (isset($script_module)) {
     # code...

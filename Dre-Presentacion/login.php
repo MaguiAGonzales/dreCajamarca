@@ -21,7 +21,7 @@
 <div class="login-box">
   
   <div class="login-logo">
-    <img src="imagen/login.png" class="login-logo">
+    <img src="imagen/login.png" class="login-logo" height="150">
   </div>
   
   <div class="login-box-body">
@@ -42,7 +42,7 @@
           </div>
          
           <div class="col-xs-4">
-            <button type="submit" id="enviar" name="enviar_sb" value="Ingresar" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+            <button type="submit" id="enviar" name="enviar_sb" value="Ingresar" class="btn btn-default btn-block btn-flat">Ingresar</button>
           </div>
       </div>
     </form>

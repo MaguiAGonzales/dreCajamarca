@@ -117,11 +117,10 @@
           })
           .done(function( data ) {
 
-            //aca mi corazon .. por sia caso nada mas
             console.log(data.trim());
 
             if(data.trim()=='correcto'){
-              //aca se reecciona
+
               alert('Boleta Registrada Correctamente');
               window.location="../Dre-Logica/Boleta.php";
             }else{
@@ -195,9 +194,7 @@
 
             //aca asignamos 
             $("#total").val(resultado);
-
-        
-
+            
        }
     }
   })

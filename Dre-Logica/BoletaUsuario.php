@@ -7,22 +7,27 @@
     <!-- Filtro  -->
 
     <div class="row"> 
-      <?php include 'LBuscarReportes.php'; ?> 
+      <?php include 'LBuscarBoletaUsuario.php'; ?> 
     </div>
 
     <!-- ./  filtro -->
-     
-    <div class="row"> 
-      <?php include 'LReportesView.php'; ?> 
+
+    <!-- tabla   -->
+
+    <div class="row" >
+      <?php  include 'LMostrarBoleta.php'; ?>
     </div>
 
+    <!-- ./  tabla -->
 
-
+     
     </section>
-
-
-
   </div>
   <!-- fin de contenido -->
+
+
+  <?php
+    $script_module='modBoleta.js';
+   ?>
 
 <?php include('../Dre-Presentacion/template_footer.php') ?>

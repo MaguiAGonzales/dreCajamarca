@@ -15,7 +15,7 @@
 ?>
 
 <div class="col-md-12">
-    <div class="box box-info">
+    <div class="box box-danger">
     	<div class="box-body">
             <input type="hidden" name="buscar" value="buscar">
             <div class="row">

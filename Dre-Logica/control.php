@@ -25,7 +25,7 @@ if(isset($_REQUEST['enviar_sb'])){
 			 
 			else if($registro=$ejecutar_administrador->fetch_assoc()) 
 			{
-			    header("location:LugardeTrabajo.php");
+			    header("location:UsuarioAdmin.php");
 				session_start();
 				$_SESSION["administrador"]=true;
 				$_SESSION["adm"]=$usuario;

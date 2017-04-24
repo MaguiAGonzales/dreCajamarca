@@ -20,12 +20,14 @@
   <script type="text/javascript" src="../Dre-Presentacion/plugins/vue.js"></script>
 </head>
 
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-red sidebar-mini">
   <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
     <a href="../Dre-Logica/LugardeTrabajo.php" class="logo">
-      <span class="logo-lg"><b>DRE Cajamarca</b></span>
+      <div align="center">
+        <img src="../Dre-Presentacion/imagen/login.png" class="logo-lg" height="50"> 
+      </div>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -54,6 +56,11 @@
         <?php
           if ($_COOKIE["tipo"]=='adm') {
         ?>
+         <li>
+            <a href="../Dre-Logica/UsuarioAdmin.php">
+              <i class="glyphicon glyphicon-cog"></i><span>ADMINISTRACION</span>
+            </a>
+          </li>
         <li>
           <a href="../Dre-Logica/LugardeTrabajo.php">
             <i class="glyphicon glyphicon-home"></i><span>LUGAR DE TRABAJO</span>
@@ -66,6 +73,7 @@
         <?php if($_COOKIE["tipo"]=='adm' || $_COOKIE["tipo"]=='reg' ){
           //estas opciones son para el adminsitrador y el registrador
           ?>
+           
             <li>
               <a href="../Dre-Logica/Usuario.php">
                 <i class="glyphicon glyphicon-user"></i><span>USUARIO</span>
@@ -98,7 +106,7 @@
             </a>
           </li>
            <li>
-            <a href="../Dre-Logica/Boleta.php">
+            <a href="../Dre-Logica/BoletaUsuario.php">
               <i class="glyphicon glyphicon-list-alt" id="b"></i><span>BOLETAS</span>
             </a>
           </li>

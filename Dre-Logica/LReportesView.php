@@ -8,7 +8,7 @@
 
 	 	$descripcion = $_POST["filtroDescripcion"];
 
-	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where id_boleta like '%$descripcion%' ORDER BY id_boleta ASC";
+	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where numeroBo like '%$descripcion%' ORDER BY id_boleta ASC";
 	}
 
 	$consul = $conexion->query($query) ;
@@ -44,21 +44,10 @@
 							<td><?= $registro['nomb_usu']?> <?= $registro['ap_pusu']?> <?= $registro['ap_musu']?></td>
 							<td><?= $registro['fecha'] ?></td>
 							<td>
-
-								<?php
-									if ($_COOKIE["tipo"]=='adm') {
-								?>
-								<a href="LEditarBoleta.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-								
-								<a href="LEliminarBoleta.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
-
-								<?php
-									}
-								?>
-								
-  								</form>
+								<a href="GenerarReporte.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
 							</td>
-						</tr>
+							</tr>
+
 					<?php } ?>
 					    </tbody>
 					</table>
