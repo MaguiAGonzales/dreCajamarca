@@ -2,15 +2,13 @@
 
 	include('conexion.php');
 
-		$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu WHERE usuario.id_tipo_usu = 1 or usuario.id_tipo_usu = 3  ORDER BY dni_usuario ASC";
-
+	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu ORDER BY dni_usuario ASC";
 
 	 if(isset($_POST["buscar"])){
 
 	 	$descripcion = $_POST["filtroDescripcion"];
 
-	 	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu INNER JOIN
-  		tipo_usuario ON usuario.id_tipo_usu = tipo_usuario.id_tipo_usu where usuario.dni_usuario like '%$descripcion%' ORDER BY dni_usuario ASC";
+	 	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu where usuario.dni_usuario like '%$descripcion%' ORDER BY dni_usuario ASC ";
 
 	 	// var_dump($query);
 	}
@@ -46,16 +44,16 @@
 							<td>
 								
 								<button href="" class="btn btn-info btn-sm"
-								 onclick="modalDetailsLT(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-file-text-o"></i></button>
+								 onclick="modalDetailsLTAdmin(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-file-text-o"></i></button>
 								
 								<?php
 									if ($_COOKIE["tipo"]=='adm') {
 								?>
 								<button href="" class="btn btn-warning btn-sm"
-								 onclick="modalEditUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-edit"></i></button>
+								 onclick="modalEditUsuAdmin(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-edit"></i></button>
 									
 								 <button href="" class="btn btn-danger btn-sm"
-								 onclick="EliminarUsu(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-remove"></i></button>
+								 onclick="EliminarUsuAdmin(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-remove"></i></button>
 								<?php
 									}
 								?>
@@ -78,14 +76,4 @@
 </div>
 
 <div class="col-sm-12">
-	
-	
 </div>
-
-
-
-
-
-
-
-

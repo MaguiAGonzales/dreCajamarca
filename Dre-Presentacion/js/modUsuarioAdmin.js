@@ -1,4 +1,4 @@
-function modalNewUsu() {
+function modalNewUsuAdmin() {
 
     $('#modalNew').modal('show');
     $('#titulo_lt').text("Crear");
@@ -39,7 +39,7 @@ function modalNewUsu() {
     $('#input_contrasenia').hide();
 }
 
-function modalDetailsLT(id){
+function modalDetailsLTAdmin(id){
 
 	$('#editar').hide();
     $('#enviar').hide();
@@ -95,7 +95,7 @@ function modalDetailsLT(id){
     $('#titulo_lt').text("Datos del");
 }
 
-function modalEditUsu(id) {
+function modalEditUsuAdmin(id) {
 
 	$('#editar').show();
     $('#enviar').hide();
@@ -153,7 +153,7 @@ function modalEditUsu(id) {
 
 }
 
-function EliminarUsu(id){
+function EliminarUsuAdmin(id){
 
 	var url = "EliminarUsuarioById.php";
 	$.post( url, { id: id })
@@ -163,7 +163,7 @@ function EliminarUsu(id){
 
 			alert('Se elimino');
 
-			window.location = 'Usuario.php';
+			window.location = 'UsuarioAdmin.php';
 
 		}else{
 			alert('Ocurrio un error al eliminar , comuníquse con el área de sistemas');

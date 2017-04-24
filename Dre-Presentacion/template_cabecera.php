@@ -56,16 +56,18 @@
         <?php
           if ($_COOKIE["tipo"]=='adm') {
         ?>
-         <li>
-            <a href="../Dre-Logica/UsuarioAdmin.php">
-              <i class="glyphicon glyphicon-cog"></i><span>ADMINISTRACION</span>
+        
+          <li>
+              <a href="../Dre-Logica/UsuarioAdmin.php">
+                <i class="glyphicon glyphicon-cog"></i><span>ADMINISTRACION</span>
+              </a>
+          </li>
+
+          <li>
+            <a href="../Dre-Logica/LugardeTrabajo.php">
+              <i class="glyphicon glyphicon-home"></i><span>LUGAR DE TRABAJO</span>
             </a>
           </li>
-        <li>
-          <a href="../Dre-Logica/LugardeTrabajo.php">
-            <i class="glyphicon glyphicon-home"></i><span>LUGAR DE TRABAJO</span>
-          </a>
-        </li>
         <?php
           }
         ?>
@@ -73,6 +75,7 @@
         <?php if($_COOKIE["tipo"]=='adm' || $_COOKIE["tipo"]=='reg' ){
           //estas opciones son para el adminsitrador y el registrador
           ?>
+            
            
             <li>
               <a href="../Dre-Logica/Usuario.php">

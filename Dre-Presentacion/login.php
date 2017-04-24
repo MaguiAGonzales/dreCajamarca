@@ -21,7 +21,7 @@
 <div class="login-box">
   
   <div class="login-logo">
-    <img src="imagen/login.png" class="login-logo" height="150">
+    <img src="imagen/login.png" class="login-logo" height="190">
   </div>
   
   <div class="login-box-body">

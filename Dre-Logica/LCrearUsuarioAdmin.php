@@ -64,7 +64,7 @@
                     <div class="col-sm-8">
                        <select id="id_tipo" name="id_tipo_slc" class="form-control" required>
                             <option value="">Seleccione Tipo de Usuario</option>
-                            <?php include("SeleccionarTipoUsuario.php");?>
+                            <?php include("SeleccionarTipoUsuarioAdmin.php");?>
                         </select>
                     </div>
                 </div>
