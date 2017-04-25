@@ -28,9 +28,6 @@
 
 	#generaremos el html de la tabla de detalles 
 
-
-
-
 	#generaremos ahora el HTML de too
 
 
@@ -41,40 +38,153 @@
 				<title>Reporte</title>
 			</head>
 			<body>
-				
-				<!--los datos de la caabecera-->
-
 				<table>
-				<tr>
-					<td>imagen</td>
-					<td>Datos de otros</td>
-				</tr>
-					
+					<tr>
+						<td>
+							Imagen
+						</td>
+					</tr>
+					<tr>
+						<td>Número Boleta: </td>
+						<td>".$datos['numeroBo']."</td>
+						<td>Dni: </td>
+						<td>".$datos['dni_usuario']."</td>
+						<td>Fecha</td>
+						<td>".$datos['fecha']."</td>
+					</tr>
 				</table>
 				
 				<hr>
 				<br>
 
 				<table>
-				<tr>
-					<td style='width: 240px;'>Descripcion </td>
-					<td  style='width: 140px;'>Monto</td>
-					<td style='width: 240px;'>Descripcion </td>
-					<td  style='width: 140px;'>Monto</td>
-				</tr>
-				<tr>
-					<td>Remuneracion Basica</td>
-					<td>".$datos['rem_bas']."</td>
-					<td></td>
-					<td></td>
-				</tr>
-					
+					<tr>
+						<td style='width: 200px;'>Descripcion </td>
+						<td  style='width: 140px;'>Monto</td>
+						<td style='width: 200px;'>Descripcion </td>
+						<td  style='width: 140px;'>Monto</td>
+						<td style='width: 200px;'>Descripcion </td>
+						<td  style='width: 140px;'>Monto</td>
+					</tr>
+
+					<tr>
+						<td>Remuneracion Basica</td>
+						<td>".$datos['rem_bas']."</td>
+						<td>Bono Personal</td>
+						<td>".$datos['bon_per']."</td>
+						<td>Decreto de Ley 25671</td>
+						<td>".$datos['d_l_25671']."</td>
+					</tr>
+					<tr>
+						<td>R. T. Homol</td>
+						<td>".$datos['r_t_homol']."</td>
+						<td>F. Dif. Z. R</td>
+						<td>".$datos['f_dif_z_r']."</td>
+						<td>Bono Familiar</td>
+						<td>".$datos['bon_familiar']."</td>
+					</tr>
+					<tr>
+						<td>B. Ref. Mov</td>
+						<td>".$datos['b_ref_mov']."</td>
+						<td>Dse. 021</td>
+						<td>".$datos['dse_021']."</td>
+						<td>Contrato</td>
+						<td>".$datos['contrato']."</td>
+					</tr>
+					<tr>
+						<td>C. V. Contra</td>
+						<td>".$datos['c_v_contra']."</td>
+						<td>Ds. 077</td>
+						<td>".$datos['ds_077']."</td>
+						<td>Aguinaldo</td>
+						<td>".$datos['aguinaldo']."</td>
+					</tr>
+					<tr>
+						<td>Bcp. Espec</td>
+						<td>".$datos['bcp_espec']."</td>
+						<td>Reunificada</td>
+						<td>".$datos['reunificada']."</td>
+						<td>I.G.V</td>
+						<td>".$datos['igv']."</td>
+					</tr>
+					<tr>
+						<td>C. T. Serv</td>
+						<td>".$datos['c_t_serv']."</td>
+						<td>Sepelio Luto</td>
+						<td>".$datos['sepelio_luto']."</td>
+						<td>Ds. 081</td>
+						<td>".$datos['ds_081']."</td>
+					</tr>
+					<tr>
+						<td>G. T. Serv</td>
+						<td>".$datos['g_t_serv']."</td>
+						<td>Propinas</td>
+						<td>".$datos['propinas']."</td>
+						<td>Pmag. Art18</td>
+						<td>".$datos['pmag_art18']."</td>
+					</tr>
+					<tr>
+						<td>D. U. 090 96</td>
+						<td>".$datos['d_u_090_96']."</td>
+						<td>Decreto de Ley 20530</td>
+						<td>".$datos['d_l_20530']."</td>
+						<td>Decreto de Ley 19990</td>
+						<td>".$datos['d_l_19990']."</td>
+					</tr>
+					<tr>
+						<td>Pre Salud</td>
+						<td>".$datos['pre_salud']."</td>
+						<td>Ipss. Vida</td>
+						<td>".$datos['ipss_vida']."</td>
+						<td>Derrama</td>
+						<td>".$datos['derrama']."</td>
+					</tr>
+					<tr>
+						<td>Judiciales</td>
+						<td>".$datos['judiciales']."</td>
+						<td>S. Cafae</td>
+						<td>".$datos['s_cafae']."</td>
+						<td>Responsabilidad</td>
+						<td>".$datos['responsabilidad']."</td>
+					</tr>
+					<tr>
+						<td>Sesdis</td>
+						<td>".$datos['sesdis']."</td>
+						<td>Ed. Sevilla</td>
+						<td>".$datos['ed_sevilla']."</td>
+						<td>Cimpi</td>
+						<td>".$datos['cimpi']."</td>
+					</tr>
+					<tr>
+						<td>Pe. P. Falla</td>
+						<td>".$datos['pe_p_falla']."</td>
+						<td>Inter. Trab</td>
+						<td>".$datos['inter_trab']."</td>
+						<td>S. Tra. Adm</td>
+						<td>".$datos['s_tra_adm']."</td>
+					</tr>
+					<tr>
+						<td>Funeraria</td>
+						<td>".$datos['funeraria']."</td>
+						<td>Ad. Fo. Pen</td>
+						<td>".$datos['ad_fo_pen']."</td>
+						<td>Sutep</td>
+						<td>".$datos['sutep']."</td>
+					</tr>
+					<tr>
+						<td>Lic. Sg. Rem</td>
+						<td>".$datos['lic_sg_rem']."</td>
+						<td>Dsct. Varios</td>
+						<td>".$datos['dsct_var']."</td>
+					</tr> 					
+
+
 				</table>
 
 				<hr>
 				<br>
 
-				<!--Aca van los detalles -->
+
 				<table>
 				<tr>
 					<td>Descripcion</td>
@@ -120,12 +230,6 @@
 
 	// Output the generated PDF to Browser
 	$dompdf->stream();
-
-	
-
-
-
-
 
 	var_dump($detalles);
 
