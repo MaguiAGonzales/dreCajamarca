@@ -24,7 +24,7 @@
   <div class="wrapper">
   <header class="main-header">
     <!-- Logo -->
-    <a href="../Dre-Logica/LugardeTrabajo.php" class="logo">
+    <a href="../Dre-Logica/UsuarioAdmin.php" class="logo">
       <div align="center">
         <img src="../Dre-Presentacion/imagen/login.png" class="logo-lg" height="50"> 
       </div>

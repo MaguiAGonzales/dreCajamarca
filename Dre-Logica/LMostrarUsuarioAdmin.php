@@ -9,12 +9,11 @@
 	 	$descripcion = $_POST["filtroDescripcion"];
 
 	 	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu where usuario.dni_usuario like '%$descripcion%' ORDER BY dni_usuario ASC ";
-
-	 	// var_dump($query);
 	}
 
 	$consul = $conexion->query($query) ;
 ?>
+
 
 <div class="col-md-12">
     <div class="box box-danger">
@@ -33,7 +32,7 @@
 					      </tr>
 					    </thead> 
 					    <tbody>
-					<?php
+						<?php
 						while ($registro = $consul->fetch_assoc()) {
 						?>
 						<tr>
@@ -45,7 +44,6 @@
 								
 								<button href="" class="btn btn-info btn-sm"
 								 onclick="modalDetailsLTAdmin(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-file-text-o"></i></button>
-								
 								<?php
 									if ($_COOKIE["tipo"]=='adm') {
 								?>
@@ -54,14 +52,12 @@
 									
 								 <button href="" class="btn btn-danger btn-sm"
 								 onclick="EliminarUsuAdmin(<?= $registro['dni_usuario'] ?>)"> <i class="fa fa-remove"></i></button>
-								<?php
-									}
-								?>
+								<?php } ?>
 												
 							</td>
 						</tr>
 							
-					<?php } ?>
+						<?php } ?>
 							
 					    </tbody>
 					</table>
@@ -71,9 +67,8 @@
         <div class="box-footer" align="center">
          		
         </div>
-        
   	</div>
 </div>
 
-<div class="col-sm-12">
+<div class="col-md-12">
 </div>

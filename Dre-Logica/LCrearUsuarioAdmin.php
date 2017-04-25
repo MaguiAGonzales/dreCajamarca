@@ -3,7 +3,7 @@
         <div class="box-header with-border">
             <h3 class="box-title"> <span id="titulo_lt"></span> Usuario</h3>
         </div>
-        <form class="form-horizontal" id="agregar_usuario" name="agregar_frm"  method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" id="agregar_usuario" name="agregar_frm"  method="post">
             <div class="box-body">
 
             <div class="col-md-6">

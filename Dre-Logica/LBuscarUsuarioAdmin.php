@@ -16,16 +16,14 @@
                     <div class="col-sm-1">
                         <button class="btn btn-success" >Buscar</button>
                     </div>
-                     <div class="col-sm-1">
+                    <div class="col-sm-1">
                         <a class="btn btn-primary" onclick="modalNewUsuAdmin()" > Nuevo </a>
                     </div>
-
                 </div>
+            </div>
         </form>
     </div>
 </div>
-
-
 
 <div class="modal fade" tabindex="-1" role="dialog" id="modalNew">
   <div class="modal-dialog" role="document" id="mdialTamanio">

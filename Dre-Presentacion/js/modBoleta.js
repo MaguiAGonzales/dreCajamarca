@@ -184,15 +184,13 @@
             dl20530 + dl19990 + presalud + ipssvida + derrama + judiciales+ scafae + responsab + sesdis + edSevilla + cimpi + pefalla + 
             intertrab + straadmin + funeraria + adfon + sutep + licsg + dsctvar;
 
-            //ahoa sumamos el monto de los otros conceptos
-
+           
             this.adicionales.forEach(function(item,index){
 
               resultado += Number(item.monto);
 
             });
-
-            //aca asignamos 
+ 
             $("#total").val(resultado);
             
        }
