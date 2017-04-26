@@ -124,54 +124,57 @@
 						<td>".$datos['pmag_art18']."</td>
 					</tr>
 					<tr>
+						<td>Rein 0 Rem</td>
+						<td>".$datos['rein_o_rem']."</td>
 						<td>D. U. 090 96</td>
 						<td>".$datos['d_u_090_96']."</td>
 						<td>Decreto de Ley 20530</td>
 						<td>".$datos['d_l_20530']."</td>
-						<td>Decreto de Ley 19990</td>
-						<td>".$datos['d_l_19990']."</td>
 					</tr>
 					<tr>
+						<td>Decreto de Ley 19990</td>
+						<td>".$datos['d_l_19990']."</td>
 						<td>Pre Salud</td>
 						<td>".$datos['pre_salud']."</td>
 						<td>Ipss. Vida</td>
 						<td>".$datos['ipss_vida']."</td>
-						<td>Derrama</td>
-						<td>".$datos['derrama']."</td>
 					</tr>
 					<tr>
+						<td>Derrama</td>
+						<td>".$datos['derrama']."</td>
 						<td>Judiciales</td>
 						<td>".$datos['judiciales']."</td>
 						<td>S. Cafae</td>
 						<td>".$datos['s_cafae']."</td>
-						<td>Responsabilidad</td>
-						<td>".$datos['responsabilidad']."</td>
 					</tr>
 					<tr>
+						<td>Responsabilidad</td>
+						<td>".$datos['responsabilidad']."</td>
 						<td>Sesdis</td>
 						<td>".$datos['sesdis']."</td>
 						<td>Ed. Sevilla</td>
 						<td>".$datos['ed_sevilla']."</td>
-						<td>Cimpi</td>
-						<td>".$datos['cimpi']."</td>
 					</tr>
 					<tr>
+						<td>Cimpi</td>
+						<td>".$datos['cimpi']."</td>
 						<td>Pe. P. Falla</td>
 						<td>".$datos['pe_p_falla']."</td>
 						<td>Inter. Trab</td>
 						<td>".$datos['inter_trab']."</td>
-						<td>S. Tra. Adm</td>
-						<td>".$datos['s_tra_adm']."</td>
 					</tr>
 					<tr>
+						<td>S. Tra. Adm</td>
+						<td>".$datos['s_tra_adm']."</td>
 						<td>Funeraria</td>
 						<td>".$datos['funeraria']."</td>
 						<td>Ad. Fo. Pen</td>
 						<td>".$datos['ad_fo_pen']."</td>
-						<td>Sutep</td>
-						<td>".$datos['sutep']."</td>
+						
 					</tr>
 					<tr>
+						<td>Sutep</td>
+						<td>".$datos['sutep']."</td>
 						<td>Lic. Sg. Rem</td>
 						<td>".$datos['lic_sg_rem']."</td>
 						<td>Dsct. Varios</td>
