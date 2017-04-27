@@ -11,6 +11,8 @@ $(function () {
   //- MONTHLY SALES CHART -
   //-----------------------
 
+  /*
+
   // Get context with jQuery - using jQuery's .get() method.
   var salesChartCanvas = $("#salesChart").get(0).getContext("2d");
   // This will get the first returned node in the jQuery collection.
@@ -84,6 +86,8 @@ $(function () {
   //Create the line chart
   salesChart.Line(salesChartData, salesChartOptions);
 
+  */
+
   //---------------------------
   //- END MONTHLY SALES CHART -
   //---------------------------
@@ -92,6 +96,7 @@ $(function () {
   //- PIE CHART -
   //-------------
   // Get context with jQuery - using jQuery's .get() method.
+  /*
   var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
   var pieChart = new Chart(pieChartCanvas);
   var PieData = [
@@ -161,6 +166,7 @@ $(function () {
   //Create pie or douhnut chart
   // You can switch between pie and douhnut using the method below.
   pieChart.Doughnut(PieData, pieOptions);
+  */
   //-----------------
   //- END PIE CHART -
   //-----------------

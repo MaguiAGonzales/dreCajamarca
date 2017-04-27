@@ -193,6 +193,24 @@
  
             $("#total").val(resultado);
             
+       },
+
+       signos: function (elemento,signo) {
+         
+
+         var valor = Math.abs($('#'+elemento).val());
+
+         if (signo=='-') {
+
+            valor *= -1; 
+
+         }
+
+         $('#'+elemento).val(valor);
+
+         this.calcularTotal();
+
+        
        }
     }
   })
