@@ -6,7 +6,9 @@
 	//require('../fpdf181/fpdf.php');
 	require('../dompdf/autoload.inc.php');
 
-	$query = "SELECT * FROM boleta where id_boleta = $id";
+	$query = "SELECT * FROM boleta inner join usuario on 
+	boleta.dni_usuario = usuario.dni_usuario inner join 
+	lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu where id_boleta = $id";
 
 	$consul = $conexion->query($query);
 
@@ -38,32 +40,52 @@
 				<title>Reporte</title>
 			</head>
 			<body>
+				
+				<div style='text-align:center; width:100%' > <h3><strong> BOLETA DE PAGO </strong></h3> </div>
+
 				<table>
 					<tr>
-						<td>
-							Imagen
+						<td rowspan='3'>
+							<div class='marca-de-agua'>
+								<img alt='' src='../Dre-Presentacion/imagen/login.png' /></div>
+							</div>
+							
 						</td>
+						<td>
+					   <strong>Nombre :</strong>	 
+						</td>
+						<td style='width:250px' >
+						".$datos['nomb_usu'].' '.$datos['ap_pusu'].' '.$datos['ap_musu']."
+						</td>
+						<td>
+						<strong>Lugar de Trabajo: </strong>
+						</td>
+						<td>".$datos['lugar_usu']."</td>
 					</tr>
 					<tr>
-						<td>Número Boleta: </td>
+						<td>  <strong>Número Boleta: </strong> </td>
 						<td>".$datos['numeroBo']."</td>
-						<td>Dni: </td>
+						<td>DNI: </td>
 						<td>".$datos['dni_usuario']."</td>
-						<td>Fecha</td>
+						
+					</tr>
+					<tr>
+						<td> <strong>Fecha: </strong> </td>
 						<td>".$datos['fecha']."</td>
+
 					</tr>
 				</table>
-				
+				<br>
 				<hr>
 				<br>
 
 				<table>
 					<tr>
-						<td style='width: 200px;'>Descripcion </td>
+						<td style='width: 100px;'>Descripcion </td>
 						<td  style='width: 140px;'>Monto</td>
-						<td style='width: 200px;'>Descripcion </td>
+						<td style='width: 100px;'>Descripcion </td>
 						<td  style='width: 140px;'>Monto</td>
-						<td style='width: 200px;'>Descripcion </td>
+						<td style='width: 100px;'>Descripcion </td>
 						<td  style='width: 140px;'>Monto</td>
 					</tr>
 
@@ -210,6 +232,29 @@
 				
 				</table>
 
+				<style>
+					
+					.marca-de-agua {
+					    width: 80px;
+					    height: auto;
+					    margin: auto;
+					}
+					.marca-de-agua img {
+					    padding: 0;
+					    width: 100%;
+					    height: auto;
+					    opacity: 0.7;
+					}
+
+					.fecha {
+						font-size:8px;
+						position:absolute;
+						top:20px;
+						right: 80px;
+					}
+					
+				</style>
+
 
 				
 			</body>
@@ -226,17 +271,21 @@
 	$dompdf->loadHtml($html);
 
 	// (Optional) Setup the paper size and orientation
-	$dompdf->setPaper('A4', 'landscape');
+	$dompdf->setPaper('A4');
 
 	// Render the HTML as PDF
 	$dompdf->render();
 
+	//echo $html;
+
 	// Output the generated PDF to Browser
 	$dompdf->stream();
 
-	var_dump($detalles);
+	//var_dump($detalles);
+
 
 	/*
+	
 
 	class PDF extends FPDF
 	{
