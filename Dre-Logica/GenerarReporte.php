@@ -45,34 +45,32 @@
 
 				<table>
 					<tr>
-						<td rowspan='3'>
+						<td rowspan='4'>
 							<div class='marca-de-agua'>
 								<img alt='' src='../Dre-Presentacion/imagen/login.png' /></div>
 							</div>
-							
 						</td>
-						<td>
-					   <strong>Nombre :</strong>	 
-						</td>
+
+						<td><strong>Número Boleta: </strong></td>
+						<td>".$datos['numeroBo']."</td>
+
+						<td> <strong>Fecha: </strong> </td>
+						<td>".$datos['fecha']."</td>
+					</tr>
+					<tr>
+						<td><strong>DNI:</strong></td>
+						<td>".$datos['dni_usuario']."</td>
+					</tr>
+					<tr>
+
+						<td><strong>Nombre :</strong></td>
 						<td style='width:250px' >
 						".$datos['nomb_usu'].' '.$datos['ap_pusu'].' '.$datos['ap_musu']."
 						</td>
-						<td>
-						<strong>Lugar de Trabajo: </strong>
-						</td>
-						<td>".$datos['lugar_usu']."</td>
 					</tr>
 					<tr>
-						<td>  <strong>Número Boleta: </strong> </td>
-						<td>".$datos['numeroBo']."</td>
-						<td>DNI: </td>
-						<td>".$datos['dni_usuario']."</td>
-						
-					</tr>
-					<tr>
-						<td> <strong>Fecha: </strong> </td>
-						<td>".$datos['fecha']."</td>
-
+						<td><strong>Lugar de Trabajo: </strong></td>
+							<td>".$datos['lugar_usu']."</td>
 					</tr>
 				</table>
 				<br>
@@ -81,12 +79,12 @@
 
 				<table>
 					<tr>
-						<td style='width: 100px;'>Descripcion </td>
-						<td  style='width: 140px;'>Monto</td>
-						<td style='width: 100px;'>Descripcion </td>
-						<td  style='width: 140px;'>Monto</td>
-						<td style='width: 100px;'>Descripcion </td>
-						<td  style='width: 140px;'>Monto</td>
+						<td style='width: 100px;'><strong>Descripcion</strong></td>
+						<td  style='width: 140px;'><strong>Monto</strong></td>
+						<td style='width: 100px;'><strong>Descripcion</strong></td>
+						<td  style='width: 140px;'><strong>Monto</strong></td>
+						<td style='width: 100px;'><strong>Descripcion</strong></td>
+						<td  style='width: 140px;'><strong>Monto</strong></td>
 					</tr>
 
 					<tr>
@@ -212,8 +210,8 @@
 
 				<table>
 				<tr>
-					<td>Descripcion</td>
-					<td>Monto</td>
+					<td style='width: 100px;'><strong>Descripcion</strong></td>
+					<td style='width: 140px;'><strong>Monto</strong></td>
 				</tr>
 				$html_detalles
 				
@@ -222,15 +220,24 @@
 				<hr>
 				<br>
 
-				<!--Aca van el total -->
+				<!--Total -->
 				<table>
 				<tr>
-					<td>Total: </td>
+					<td><strong>Total:</strong></td>
 					<td>".$datos['total']."  </td>
 				</tr>
-				
-				
 				</table>
+
+				<hr>
+				<br>
+				
+				<!--Info -->
+				<table>
+				<tr>
+					<td>Para mayor información comunicarse con la oficina de Informática</td>
+					<td>Teléfono:  Anexo:</td>
+				</tr>
+				<table>
 
 				<style>
 					
@@ -254,9 +261,6 @@
 					}
 					
 				</style>
-
-
-				
 			</body>
 			</html>";
 
