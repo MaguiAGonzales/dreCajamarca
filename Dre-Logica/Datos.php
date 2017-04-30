@@ -25,14 +25,14 @@
 				
 				<FORM id="agregar_otros" name="agregar_otros_frm" action="perfil.php" method="post">
 					<ul class="list-group">
-						<li class="list-group-item">Dni: <?php echo $_SESSION["doc"]; ?></li>
-						<li class="list-group-item">Nombre: <?php echo $registro["nomb_usu"]; ?></li>
-						<li class="list-group-item">Apellidos: <?php echo $registro["apellidos"]; ?></li>
-						<li class="list-group-item">Fecha Nacimiento: <?php echo $registro["fech_nac"]; ?></li>
-						<li class="list-group-item">Teléfono: <?php echo $registro["telef_usu"]; ?></li>
-						<li class="list-group-item">Correo: <?php echo $registro["e_mail"]; ?></li>
-						<li class="list-group-item">Dirección: <?php echo $registro["direc_usu"]; ?></li>
-						<li class="list-group-item">Institución Educativa: <?php echo $registro["lugar"]; ?></li>
+						<li class="list-group-item"><strong>Dni:</strong><?php echo $_SESSION["doc"]; ?></li>
+						<li class="list-group-item"><strong>Nombres:</strong> <?php echo $registro["nomb_usu"]; ?></li>
+						<li class="list-group-item"><strong>Apellidos:</strong><?php echo $registro["apellidos"]; ?></li>
+						<li class="list-group-item"><strong>Fecha Nacimiento:</strong><?php echo $registro["fech_nac"]; ?></li>
+						<li class="list-group-item"><strong>Teléfono:</strong><?php echo $registro["telef_usu"]; ?></li>
+						<li class="list-group-item"><strong>Correo:</strong><?php echo $registro["e_mail"]; ?></li>
+						<li class="list-group-item"><strong>Dirección:</strong><?php echo $registro["direc_usu"]; ?></li>
+						<li class="list-group-item"><strong>Institución Educativa:</strong><?php echo $registro["lugar"]; ?></li>
 					</ul>
 									
 						<div>

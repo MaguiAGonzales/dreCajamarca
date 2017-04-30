@@ -44,7 +44,7 @@
 							<td><?= $registro['nomb_usu']?> <?= $registro['ap_pusu']?> <?= $registro['ap_musu']?></td>
 							<td><?= $registro['fecha'] ?></td>
 							<td>
-								<a href="GenerarReporte.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
+								<a href="GenerarReporte.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-info btn-sm"><i class="fa fa-download"></i></a>
 							</td>
 							</tr>
 

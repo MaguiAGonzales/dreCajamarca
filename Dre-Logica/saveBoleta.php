@@ -60,25 +60,34 @@
 
 		if ($ejecutar_consulta) {
 
-			$detalle = $_POST['detalle'];
+			if (isset($_POST['detalle'])) {
+				# code...
+				$detalle = $_POST['detalle'];
 
-			$query = "SELECT * from boleta where fecha = '$fecha' and numeroBo = $numBoleta";
+				$query = "SELECT * from boleta where fecha = '$fecha' and numeroBo = $numBoleta";
 
-			$consul = $conexion->query($query) ;
+				$consul = $conexion->query($query) ;
 
-			$reg_boleta = $consul->fetch_assoc();
+				$reg_boleta = $consul->fetch_assoc();
 
-			$idBoleta = $reg_boleta['id_boleta'];
+				$idBoleta = $reg_boleta['id_boleta'];
 
-			foreach ($detalle as $item) {
-				# code...sii
+				foreach ($detalle as $item) {
+					# code...sii
 
-				$idOtros = $item['id'];
-				$dscto   = $item['monto'];
+					$idOtros = $item['id'];
+					$dscto   = $item['monto'];
 
-				$consulta="INSERT INTO detalle_bo(id_boleta,id_otros,dscto) VALUES ('$idBoleta','$idOtros','$dscto')";
-				$ejecutar_consulta=$conexion->query($consulta);
+					$consulta="INSERT INTO detalle_bo(id_boleta,id_otros,dscto) VALUES ('$idBoleta','$idOtros','$dscto')";
+					$ejecutar_consulta=$conexion->query($consulta);
+				}
+			} else {
+				# code...
+				
 			}
+			
+
+			
 
 		if ($ejecutar_consulta) {
 				echo 'correcto';
