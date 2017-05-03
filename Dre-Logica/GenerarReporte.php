@@ -54,12 +54,15 @@
 						<td><strong>Número Boleta: </strong></td>
 						<td>".$datos['numeroBo']."</td>
 
-						<td> <strong>Fecha: </strong> </td>
-						<td>".$datos['fecha']."</td>
+						<td> <strong>Mes: </strong> </td>
+						<td>".$datos['mes']."</td>
 					</tr>
 					<tr>
 						<td><strong>DNI:</strong></td>
 						<td>".$datos['dni_usuario']."</td>
+
+						<td> <strong>Año: </strong> </td>
+						<td>".$datos['anio']."</td>
 					</tr>
 					<tr>
 
@@ -235,7 +238,7 @@
 				<table>
 				<tr>
 					<td>Para mayor información comunicarse con la oficina de Informática</td>
-					<td>Teléfono:  Anexo:</td>
+					<td>Teléfono: (076) 361299  Anexo:38007</td>
 				</tr>
 				<table>
 

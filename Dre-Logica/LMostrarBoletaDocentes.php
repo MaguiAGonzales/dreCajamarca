@@ -46,7 +46,7 @@
 					      </tr>
 					    </thead> 
 					    <tbody>
-					<?php
+						<?php
 						while ($registro = $consul->fetch_assoc()) {
 						?>
 						<tr>
@@ -72,7 +72,7 @@
   								</form>
 							</td>
 						</tr>
-					<?php } ?>
+						<?php } ?>
 					    </tbody>
 					</table>
 				</div>
