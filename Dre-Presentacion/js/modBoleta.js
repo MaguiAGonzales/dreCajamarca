@@ -66,6 +66,10 @@
             dni: $("#filDNI").val(),
             numBoleta: $("#numeroBo").val(),
             fecha: fecha,
+
+            mes: $("#mes").val(),
+            anio: $("#anio").val(),
+
             rembasi: $("#rem_bas").val(),
             bonpers: $("#bon_per").val(),
             dl25671: $("#d_l_25671").val(),

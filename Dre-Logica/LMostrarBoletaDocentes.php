@@ -4,26 +4,40 @@
 
 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario ORDER BY id_boleta ASC";
 
+	if($_COOKIE["tipo"] == 'doc'){
+
+		$dni = $_COOKIE["dni"];
+
+		$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario 
+		where usuario.dni_usuario = '$dni'
+		ORDER BY id_boleta ASC";
+
+	}
+
 	 if(isset($_POST["buscar"])){
 
-	 	$descripcion = $_POST["filtroDescripcion"];
+	 	$mes = $_POST["mes"];
+	 	$anio = $_POST["anio"];
 
-	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where id_boleta like '%$descripcion%' ORDER BY id_boleta ASC";
+	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario
+	 	where boleta.mes = '$mes' and  boleta.anio = '$anio' and usuario.dni_usuario = '$dni' ORDER BY id_boleta ASC";
+
 	}
 
 	$consul = $conexion->query($query) ;
 ?>
 
 <div class="col-md-12">
-    <div class="box box-info">
+    <div class="box box-danger">
     	<div class="box-body">
             <input type="hidden" name="buscar" value="buscar">
             <div class="row">
 				<div class="col-sm-12">
-					<table  class="table table-bordered table-hover">
+					<table class="table table-bordered table-hover">
 					    <thead>
 					      <tr>
-					      	<th>Código Boleta</th>
+					      	<th>Código</th>
+					      	<th>Número Boleta</th>
 					      	<th>Dni</th>
 					        <th>Nombre Completo</th>
 					        <th>Mes</th>
@@ -48,11 +62,9 @@
 							<td>
 
 								<?php
-									if ($_COOKIE["tipo"]=='adm') {
+									if ($_COOKIE["tipo"]=='doc') {
 								?>
-								<a href="LEditarBoleta.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
-								
-								<a href="LEliminarBoleta.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></a>
+								<a href="GenerarReporte.php?id= <?= $registro['id_boleta'] ?>" class="btn btn-info btn-sm"><i class="fa fa-download"></i></a>
 
 								<?php
 									}

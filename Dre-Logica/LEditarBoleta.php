@@ -20,18 +20,29 @@
 	                        <input class="form-control" id="filDNI" type="text" name="filtroDescripcion" disabled>
 	                    </div>
 
-			            <div class="col-sm-3">
+			            <div class="col-sm-5">
 							<input type="text" class="form-control" id="nomb_completo" name="nomb_completo_txt" disabled>
 			            </div>
 
 			            <div class="col-sm-3">
 							<input type="text" class="form-control" id="fecha" name="fecha" disabled>
 			            </div>
+			         </div>
 
-			            <div class="col-sm-2">
+			        <BR>
+
+					<div class="row">
+			            <div class="col-sm-3">
 							<input type="text" class="form-control" id="numeroBo" name="numeroBo" disabled>
 			            </div>
-			         </div>
+			            <div class="col-sm-3">
+							<input type="text" class="form-control" id="mes" name="mes" disabled>
+			            </div>
+			            <div class="col-sm-3">
+							<input type="text" class="form-control" id="anio" name="anio" disabled>
+			            </div>
+			        </div>
+
 	            </div>
 	        </form>
 	  	</div>

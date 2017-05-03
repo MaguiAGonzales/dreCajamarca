@@ -13,24 +13,26 @@
                     
                     <div class="col-sm-2">
                        <select id="id_mes" name="mes" class="form-control" required>
+                            <option value="">Seleccione Mes</option>
                             <option value="Enero">Enero</option>
                             <option value="Febrero">Febrero</option>
-                            <option value="Marzo">marzo</option>
-                            <option value="Abril">abril</option>
-                            <option value="Mayo">mayo</option>
-                            <option value="Junio">junio</option>
-                            <option value="Julio">julio</option>
-                            <option value="Agossto">agosto</option>
-                            <option value="Septiembre">septiembre</option>
-                            <option value="Octubre">octubre</option>
-                            <option value="Noviembre">noviembre</option>
-                            <option value="Diciembre">diciembre</option>
+                            <option value="Marzo">Marzo</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Mayo">Mayo</option>
+                            <option value="Junio">Junio</option>
+                            <option value="Julio">Julio</option>
+                            <option value="Agossto">Agosto</option>
+                            <option value="Septiembre">Septiembre</option>
+                            <option value="Octubre">Octubre</option>
+                            <option value="Noviembre">Noviembre</option>
+                            <option value="Diciembre">Diciembre</option>
                             
                         </select>
                     </div>
 
                     <div class="col-sm-2">
                        <select id="id_anio" name="anio" class="form-control" required>
+                            <option value="">Seleccione Año</option>
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
                             <option value="2015">2015</option>

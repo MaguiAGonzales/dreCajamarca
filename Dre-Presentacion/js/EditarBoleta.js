@@ -56,6 +56,9 @@
           numBoleta: $("#numeroBo").val(),
           fecha: $("#fecha").val(),
 
+             mes: $("#mes").val(),
+            anio: $("#anio").val(),
+
           rembasi: $("#rem_bas").val(),
           bonpers: $("#bon_per").val(),
           dl25671: $("#d_l_25671").val(),
@@ -217,6 +220,9 @@
         $("#nomb_completo").val(result.nomb_usu);
         $("#fecha").val(result.fecha);
         $("#numeroBo").val(result.numeroBo);
+
+        $("#mes").val(result.mes);
+        $("#anio").val(result.anio);
 
         //datos de la boleta
 

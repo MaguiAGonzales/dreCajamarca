@@ -5,6 +5,9 @@
 	$numBoleta=$_POST["numBoleta"];
 	$fecha=$_POST["fecha"];
 
+	$mes= $_POST["mes"];
+	$anio= $_POST["anio"];
+
 	$rembasi=$_POST["rembasi"];
 	$bonpers=$_POST["bonpers"];
 	$dl25671=$_POST["dl25671"];

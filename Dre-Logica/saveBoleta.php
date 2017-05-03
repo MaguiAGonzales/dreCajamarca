@@ -3,6 +3,9 @@
 	$numBoleta=$_POST["numBoleta"];
 	$dni=$_POST["dni"];
 
+	$mes= $_POST["mes"];
+	$anio= $_POST["anio"];
+
 	$fecha=$_POST["fecha"];
 	$rembasi=$_POST["rembasi"];
 	$bonpers=$_POST["bonpers"];
@@ -54,7 +57,7 @@
 
 	include ("conexion.php"); 
 
-	$consulta="INSERT INTO boleta(numeroBo, dni_usuario, fecha, rem_bas, bon_per, d_l_25671,r_t_homol,f_dif_z_r,bon_familiar,b_ref_mov,dse_021,contrato, c_v_contra, ds_077, aguinaldo,bcp_espec,reunificada,igv,c_t_serv, sepelio_luto,ds_081, g_t_serv, propinas, pmag_art18, d_u_090_96, d_u_80_94, rein_o_rem, d_l_20530, d_l_19990, pre_salud, ipss_vida, derrama, judiciales, s_cafae, responsabilidad, sesdis, ed_sevilla, cimpi, pe_p_falla, inter_trab, s_tra_adm, funeraria, ad_fo_pen, sutep, lic_sg_rem, dsct_var, total) VALUES ('$numBoleta','$dni','$fecha','$rembasi','$bonpers','$dl25671','$rthomol','$bdif','$bonfamiliar','$brefmov','$ds021', '$contrato','$cvcontra','$ds077','$aguinaldo','$bcpespec','$reunificada','$igv','$ctserv', '$sepelioluto','$ds081','$gtserv','$propinas','$pmag','$du090','$du80','$rein','$dl20530','$dl19990','$presalud','$ipssvida','$derrama','$judiciales','$scafae','$responsab','$sesdis','$edSevilla','$cimpi','$pefalla','$intertrab','$straadmin','$funeraria','$adfon','$sutep','$licsg','$dsctvar','$total')";
+	$consulta="INSERT INTO boleta(numeroBo, dni_usuario, fecha, mes, anio, rem_bas, bon_per, d_l_25671,r_t_homol,f_dif_z_r,bon_familiar,b_ref_mov,dse_021,contrato, c_v_contra, ds_077, aguinaldo,bcp_espec,reunificada,igv,c_t_serv, sepelio_luto,ds_081, g_t_serv, propinas, pmag_art18, d_u_090_96, d_u_80_94, rein_o_rem, d_l_20530, d_l_19990, pre_salud, ipss_vida, derrama, judiciales, s_cafae, responsabilidad, sesdis, ed_sevilla, cimpi, pe_p_falla, inter_trab, s_tra_adm, funeraria, ad_fo_pen, sutep, lic_sg_rem, dsct_var, total) VALUES ('$numBoleta','$dni','$fecha','$mes','$anio','$rembasi','$bonpers','$dl25671','$rthomol','$bdif','$bonfamiliar','$brefmov','$ds021', '$contrato','$cvcontra','$ds077','$aguinaldo','$bcpespec','$reunificada','$igv','$ctserv', '$sepelioluto','$ds081','$gtserv','$propinas','$pmag','$du090','$du80','$rein','$dl20530','$dl19990','$presalud','$ipssvida','$derrama','$judiciales','$scafae','$responsab','$sesdis','$edSevilla','$cimpi','$pefalla','$intertrab','$straadmin','$funeraria','$adfon','$sutep','$licsg','$dsctvar','$total')";
 
 		$ejecutar_consulta=$conexion->query($consulta);
 
