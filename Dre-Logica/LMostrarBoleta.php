@@ -4,11 +4,27 @@
 
 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario ORDER BY id_boleta ASC";
 
+	if($_COOKIE["tipo"] == 'doc'){
+
+		$dni = $_COOKIE["dni"];
+
+		$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario 
+		where usuario.dni_usuario = '$dni'
+		ORDER BY id_boleta ASC";
+
+	}
+
+
+
 	 if(isset($_POST["buscar"])){
 
-	 	$descripcion = $_POST["filtroDescripcion"];
+	 	$mes = $_POST["mes"];
+	 	$anio = $_POST["anio"];
 
-	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where id_boleta like '%$descripcion%' ORDER BY id_boleta ASC";
+	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario
+	 	where boleta.mes = '$mes' and  boleta.anio = '$anio' and usuario.dni_usuario = '$dni' ORDER BY id_boleta ASC";
+
+
 	}
 
 	$consul = $conexion->query($query) ;
