@@ -18,9 +18,12 @@
 
 	 	$mes = $_POST["mes"];
 	 	$anio = $_POST["anio"];
+	 	$nombre = $_POST['nombre'];
+
 
 	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario
-	 	where boleta.mes = '$mes' and  boleta.anio = '$anio' and usuario.dni_usuario = '$dni' ORDER BY id_boleta ASC";
+	 	where boleta.mes = '$mes' and  boleta.anio = '$anio' and usuario.dni_usuario = '$dni'
+	 	and concat(usuario.nomb_usu,' ',usuario.ap_pusu,' ',usuario.ap_musu) like  '%$nombre%' ORDER BY id_boleta ASC";
 
 	}
 

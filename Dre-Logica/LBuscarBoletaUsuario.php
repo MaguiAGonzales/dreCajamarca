@@ -40,6 +40,10 @@
                         </select>
                     </div>
 
+                     <div class="col-sm-2">
+                        <input class="form-control" type="text" name="nombre" placeholder="nombre: Jhon Doe">
+                    </div>
+
                     <div class="col-sm-1">
                         <button class="btn btn-success" >Buscar</button>
                     </div>

@@ -7,8 +7,9 @@
 	 if(isset($_POST["buscar"])){
 
 	 	$descripcion = $_POST["filtroDescripcion"];
+	 	$nombre = $_POST['nombre'];
 
-	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where id_boleta like '%$descripcion%' ORDER BY id_boleta ASC";
+	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where id_boleta like '%$descripcion%' and concat(usuario.nomb_usu,' ',usuario.ap_pusu,' ',usuario.ap_musu) like  '%$nombre%' ORDER BY id_boleta ASC";
 	}
 
 	$consul = $conexion->query($query) ;

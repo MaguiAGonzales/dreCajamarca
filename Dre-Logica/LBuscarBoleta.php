@@ -11,7 +11,10 @@
 
                 <div class="row">
                     <div class="col-sm-2">
-                        <input class="form-control" type="text" name="filtroDescripcion">
+                        <input class="form-control" type="text" name="filtroDescripcion" placeholder="Id Ej: 1">
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="form-control" type="text" name="nombre" placeholder="nombre: Darky Gonzales">
                     </div>
                     <div class="col-sm-1">
                         <button class="btn btn-success" >Buscar</button>
