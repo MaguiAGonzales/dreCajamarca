@@ -19,7 +19,6 @@
 ?>
 
 
-<div style="padding: 15px">
 <div class="col-md-12">
     <div class="box box-danger">
     	<div class="box-body">
@@ -74,9 +73,6 @@
         </div>
   	</div>
 </div>
-	
-</div>
-
 
 <div class="col-md-12">
 </div>

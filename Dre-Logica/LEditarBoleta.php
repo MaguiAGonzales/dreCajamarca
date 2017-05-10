@@ -538,7 +538,7 @@
 				</div>
 
 				<div class="box-footer" align="center">
-	     			<a type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success" @click="sendData()">Editar</a> 
+	     			<a type="submit" id="enviar" name="enviar_sb" value="Guardar" class="btn btn-success" @click="sendData()">Actualizar</a> 
 	           
 	            </div>
 			</form>	

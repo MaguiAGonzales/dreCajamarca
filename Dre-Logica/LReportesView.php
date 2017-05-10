@@ -13,7 +13,7 @@
 
 	$consul = $conexion->query($query) ;
 ?>
-<div style="padding: 15px">
+
 <div class="col-md-12">
     <div class="box box-danger">
     	<div class="box-body">
@@ -57,7 +57,6 @@
         <div class="box-footer" align="center">	
         </div>
   	</div>
-</div>
 </div>
 
 <div class="col-sm-12">
