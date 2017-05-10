@@ -26,7 +26,7 @@
 
 	$consul = $conexion->query($query) ;
 ?>
-
+<div style="padding: 15px">
 <div class="col-md-12">
     <div class="box box-danger">
     	<div class="box-body">
@@ -36,12 +36,12 @@
 					<table class="table table-bordered table-hover">
 					    <thead>
 					      <tr>
-					      	<th>Código</th>
 					      	<th>Número Boleta</th>
 					      	<th>Dni</th>
 					        <th>Nombre Completo</th>
 					        <th>Mes</th>
 					        <th>Año</th>
+					        <th>Total</th>
 					        <th>Opciones</th>
 					      </tr>
 					    </thead> 
@@ -50,15 +50,12 @@
 						while ($registro = $consul->fetch_assoc()) {
 						?>
 						<tr>
-							<td><?= $registro['id_boleta'] ?></td>
 							<td><?= $registro['numeroBo'] ?></td>
 							<td><?= $registro['dni_usuario'] ?></td>
-
-
 							<td><?= $registro['nomb_usu']?> <?= $registro['ap_pusu']?> <?= $registro['ap_musu']?></td>
 							<td><?= $registro['mes'] ?></td>
 							<td><?= $registro['anio'] ?></td>
-
+							<td><?= $registro['total'] ?></td>
 							<td>
 
 								<?php
@@ -81,6 +78,7 @@
         <div class="box-footer" align="center">	
         </div>
   	</div>
+</div>
 </div>
 
 <div class="col-sm-12">
