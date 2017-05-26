@@ -8,14 +8,15 @@
 
 	 	$descripcion = $_POST["filtroDescripcion"];
 
-	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where id_boleta like '%$descripcion%' ORDER BY id_boleta ASC";
+	 	$query = "SELECT * FROM boleta inner join usuario on boleta.dni_usuario = usuario.dni_usuario where
+	 	 ( CONCAT(usuario.nomb_usu,' ',usuario.ap_pusu,' ',usuario.ap_musu) LIKE '%$descripcion%' OR boleta.id_boleta = '$descripcion' OR usuario.dni_usuario = '$descripcion' or boleta.numeroBo = '$descripcion')  ORDER BY id_boleta ASC";
 	}
 
 	$consul = $conexion->query($query) ;
 ?>
-
+<div style="padding: 15px">
 <div class="col-md-12">
-    <div class="box box-info">
+    <div class="box box-danger">
     	<div class="box-body">
             <input type="hidden" name="buscar" value="buscar">
             <div class="row">
@@ -24,6 +25,7 @@
 					    <thead>
 					      <tr>
 					      	<th>Código Boleta</th>
+					      	<th>Número Boleta</th>
 					      	<th>Dni</th>
 					        <th>Nombre Completo</th>
 					        <th>Mes</th>
@@ -70,7 +72,7 @@
         </div>
   	</div>
 </div>
-
+</div>
 <div class="col-sm-12">
 	
 	

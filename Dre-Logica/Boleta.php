@@ -1,3 +1,9 @@
+<?php
+session_start();
+if ((!isset($_SESSION["administrador"])) && (!isset($_SESSION["registrador"]))){
+  header("location:salir.php");
+}else{
+?>
 <?php include('../Dre-Presentacion/template_cabecera.php') ?>
 
   <!--contenido va aqui -->
@@ -31,3 +37,4 @@
    ?>
 
 <?php include('../Dre-Presentacion/template_footer.php') ?>
+<?php } ?>

@@ -13,7 +13,6 @@
 
 	$consul = $conexion->query($query) ;
 ?>
-
 <div class="col-md-12">
     <div class="box box-danger">
     	<div class="box-body">

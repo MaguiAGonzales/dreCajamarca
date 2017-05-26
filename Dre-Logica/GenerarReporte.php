@@ -3,7 +3,6 @@
 	$id = $_GET['id'];
  
 	include('conexion.php');
-	//require('../fpdf181/fpdf.php');
 	require('../dompdf/autoload.inc.php');
 
 	$query = "SELECT * FROM boleta inner join usuario on 
@@ -23,15 +22,25 @@
 
 	$consul_det = $conexion->query($q_detalle);
 	while ($datos_det = $consul_det->fetch_assoc()) {
-		//$detalles[] = $datos_det;
+
 		$html_detalles .= "<tr><td>".$datos_det['nombre']."</td>"."<td>".$datos_det['dscto']."</td></tr>";
 	}
 
+	$table_detalles='';
 
-	#generaremos el html de la tabla de detalles 
+	if($html_detalles != ""){
+		$table_detalles = "<table>
+				<tr>
+					<td style='width: 100px;'><strong>Descripcion</strong></td>
+					<td style='width: 140px;'><strong>Monto</strong></td>
+				</tr>
+				$html_detalles
+				
+				</table>
 
-	#generaremos ahora el HTML de too
-
+				<hr>
+				<br>";
+	}
 
 	$html = "<!DOCTYPE html>
 			<html lang='en'>
@@ -209,19 +218,12 @@
 
 				<hr>
 				<br>
-
-
-				<table>
-				<tr>
-					<td style='width: 100px;'><strong>Descripcion</strong></td>
-					<td style='width: 140px;'><strong>Monto</strong></td>
-				</tr>
-				$html_detalles
 				
-				</table>
+				<!--detalles -->
 
-				<hr>
-				<br>
+				$table_detalles
+
+				<!-- ./-->
 
 				<!--Total -->
 				<table>
@@ -231,18 +233,40 @@
 				</tr>
 				</table>
 
-				<hr>
-				<br>
+				<br> 
+
+				<!--Firma -->
+				<div class='firma' >
+							<img alt='' src='../Dre-Presentacion/imagen/firma.png' /></div>
+				</div>
 				
+				<br> 
+				<br>
+				<br>
+				<br>
+
 				<!--Info -->
 				<table>
 				<tr>
 					<td>Para mayor información comunicarse con la oficina de Informática</td>
 					<td>Teléfono: (076) 361299  Anexo:38007</td>
 				</tr>
-				<table>
+				<table>			
 
 				<style>
+					
+					.firma {
+					    width: 80px;
+					    height: auto;
+					    margin: auto;
+					    text-align:center;
+					}
+					.firma img {
+					    padding: 0;
+					    width: 100%;
+					    height: auto;
+					    opacity: 0.9;
+					}
 					
 					.marca-de-agua {
 					    width: 80px;
@@ -289,61 +313,5 @@
 	$dompdf->stream();
 
 	//var_dump($detalles);
-
-
-	/*
-	
-
-	class PDF extends FPDF
-	{
-
-	// Cabecera de página
-		function Header()
-		{
-		    // Logo
-		    $this->Image('../Dre-Presentacion/imagen/login.png',10,8,33);
-		    // Arial bold 15
-		    $this->SetFont('Arial','B',15);
-		    // Movernos a la derecha
-		    $this->Cell(80);
-		    // Título
-		    $this->Cell(30,10,'Constancia de Pagos',1,0,'C');
-		    // Salto de línea
-		    $this->Ln(20);
-
-		   // $this -> Cell(50,50,$total);
-		}	
-
-	// Pie de página
-		function Footer()
-		{
-		    // Posición: a 1,5 cm del final
-		    $this->SetY(-15);
-		    // Arial italic 8
-		    $this->SetFont('Arial','I',8);
-		    // Número de página
-		    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
-		}
-	}
-
-		// Creación del objeto de la clase heredada
-		$pdf = new PDF();
-		$pdf->AliasNbPages();
-		$pdf->AddPage();
-		$pdf->SetFont('Times','',12);
-		
-		$query = "SELECT * FROM boleta where id_boleta = $id";
-
-		$consul = $conexion->query($query);
-
-			while ($datos = $consul->fetch_assoc()) {
-				$total = $datos['numeroBo'];
-				$pdf-> cell (50,50,$total);
-			}
-
-		$pdf->Output();
-
-		*/
-
 
 ?>

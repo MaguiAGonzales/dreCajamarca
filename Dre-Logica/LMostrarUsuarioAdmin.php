@@ -12,13 +12,13 @@
 
 	 	$descripcion = $_POST["filtroDescripcion"];
 
-	 	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu where usuario.dni_usuario like '%$descripcion%' and tipo_usuario.id_tipo_usu in (1,3)  ORDER BY dni_usuario ASC ";
+	 	$query = "SELECT * FROM usuario inner join lugar_trabajo on usuario.id_lugar_usu = lugar_trabajo.id_lugar_usu inner join tipo_usuario on usuario.id_tipo_usu = tipo_usuario.id_tipo_usu where ( CONCAT(usuario.nomb_usu,' ',usuario.ap_pusu,' ',usuario.ap_musu) LIKE '%$descripcion%' OR usuario.dni_usuario = '$descripcion') and tipo_usuario.id_tipo_usu in (1,3)  ORDER BY dni_usuario ASC ";
 	}
 
 	$consul = $conexion->query($query) ;
 ?>
 
-
+<div style="padding: 15px">
 <div class="col-md-12">
     <div class="box box-danger">
     	<div class="box-body">
@@ -73,6 +73,6 @@
         </div>
   	</div>
 </div>
-
+</div>
 <div class="col-md-12">
 </div>
